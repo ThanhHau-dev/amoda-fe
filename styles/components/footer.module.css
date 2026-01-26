@@ -1,0 +1,133 @@
+.footer_container {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 30px 20px;
+}
+
+.footer_content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer_column {
+  flex: 1;
+  min-width: 280px;
+}
+
+.column_title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.map_wrapper {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #333;
+  filter: grayscale(1);
+  transition: 0.3s;
+}
+.map_wrapper:hover {
+  filter: grayscale(0);
+}
+
+.info_section {
+  text-align: center;
+}
+.info_section > p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #ccc;
+}
+.info-section a {
+  color: #fff;
+  text-decoration: none;
+}
+.info_section a:hover {
+  color: #3498db;
+}
+
+.social_icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.follow_section {
+  text-align: right;
+}
+
+.icon_circle {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.icon_circle:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer_bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 11px;
+  color: #666;
+}
+
+.footer_nav {
+  margin-bottom: 10px;
+}
+.footer_nav a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.footer_nav a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .footer_column {
+    text-align: center;
+    width: 100%;
+  }
+
+  .social_icons {
+    justify-content: center;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .bottom_right {
+    order: -1;
+  }
+}

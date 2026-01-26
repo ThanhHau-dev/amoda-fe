@@ -1,11 +1,1188 @@
-[00:00:00.637] Server  LOG     ✓ Ready in 467ms
-[00:00:18.650] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:18.650] Browser WARN    Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:06:37.744] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.747] Server  ERROR   ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.750] Server  ERROR   ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.756] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.758] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.779] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.781] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/media/thanhhau/DATA5/Web_amoda_Hao/FE/amoda-fe/app'
-[00:06:37.811] Server  LOG     ✓ Compiled in 32ms
+[00:00:04.315] Server  LOG     ✓ Ready in 3.7s
+[00:00:08.544] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/CSBH-T1.2026-1536x585.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:16.265] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/1.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:00:16.265] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:01:56.259] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/CSBH-T1.2026-1536x585.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:02:08.092] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/1.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:02:08.092] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:10:36.631] Server  LOG     ✓ Compiled in 17ms
+[00:12:21.116] Server  LOG     ✓ Compiled in 13ms
+[00:12:41.370] Server  LOG     ✓ Compiled in 14ms
+[00:13:38.408] Server  LOG     ✓ Compiled in 527ms
+[00:14:18.763] Server  LOG     ✓ Compiled in 14ms
+[00:14:23.692] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:14:23.696] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:14:23.702] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:14:24.352] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'includes')
+[00:14:45.465] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:14:45.468] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:14:45.472] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:14:45.959] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:14:45.961] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:14:45.963] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:14:46.322] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'includes')
+[00:16:00.247] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:16:00.261] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:16:00.452] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:16:00.454] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:16:00.455] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:16:00.456] Server  LOG     ✓ Compiled in 41ms
+[00:16:00.620] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:16:00.623] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:16:00.625] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:16:01.244] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'includes')
+[00:16:07.739] Server  LOG     ✓ Compiled in 6ms
+[00:16:11.355] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <MainLayout> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:16:20.995] Server  LOG     ✓ Compiled in 7ms
+[00:16:24.695] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <MainLayout> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:16:30.441] Server  LOG     ✓ Compiled in 5ms
+[00:16:49.953] Server  LOG     ✓ Compiled in 8ms
+[00:17:01.441] Server  LOG     ✓ Compiled in 6ms
+[00:17:11.513] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:17:11.514] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:17:11.516] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:17:12.332] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'includes')
+[00:17:26.234] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <Container fn={function fn}>
+      <PagesDevOverlayBridge>
+        <PagesDevOverlayErrorBoundary>
+          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+            <App pageProps={{}} Component={function Index} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+              <MainLayout suppressHydrationWarning={true}>
+                <Header>
+                  <header className="header-mod...">
+                    <div
+                      className="header-module__bEoNOa__header_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="header-module__bEoNOa__logo_section"
+                        onClick={function onClick}
+-                       bis_skin_checked="1"
+                      >
+                      <nav>
+                      <div
+                        className="header-module__bEoNOa__section_header_left"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="header-module__bEoNOa__mobile_toggle"
+                          onClick={function onClick}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="header-module__bEoNOa__search_section"
+-                         bis_skin_checked="1"
+                        >
+                          <button>
+                          <div
+                            className="header-module__bEoNOa__input_form"
+-                           bis_skin_checked="1"
+                          >
+                <main>
+                  <Index>
+                    <Slider>
+                      <div
+                        className="silder-module__7PWE7W__slider_wrapper"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="silder-module__7PWE7W__slider_container"
+                          style={{transform:"translateX..."}}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="silder-module__7PWE7W__slider_item"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="silder-module__7PWE7W__slider_overlay"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="silder-module__7PWE7W__content_box"
+-                               bis_skin_checked="1"
+                              >
+                          <div
+                            className="silder-module__7PWE7W__slider_item"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="silder-module__7PWE7W__slider_overlay"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="silder-module__7PWE7W__content_box"
+-                               bis_skin_checked="1"
+                              >
+                          <div
+                            className="silder-module__7PWE7W__slider_item"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="silder-module__7PWE7W__slider_overlay"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="silder-module__7PWE7W__content_box"
+-                               bis_skin_checked="1"
+                              >
+                          <div
+                            className="silder-module__7PWE7W__slider_item"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="silder-module__7PWE7W__slider_overlay"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="silder-module__7PWE7W__content_box"
+-                               bis_skin_checked="1"
+                              >
+                          <div
+                            className="silder-module__7PWE7W__slider_item"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="silder-module__7PWE7W__slider_overlay"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="silder-module__7PWE7W__content_box"
+-                               bis_skin_checked="1"
+                              >
+                        <button>
+                        <button>
+                        <div
+                          className="silder-module__7PWE7W__pagination_dots"
+-                         bis_skin_checked="1"
+                        >
+                    <div
+                      className="index-module__LvwIca__content_main"
+-                     bis_skin_checked="1"
+                    >
+                      <ListItem_Main>
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <h1>
+                          <div
+                            className="listItem_main-module__zFRpjq__car_grid"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="listItem_main-module__zFRpjq__car_card"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_header"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_image"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_actions"
+-                               bis_skin_checked="1"
+                              >
+                            <div
+                              className="listItem_main-module__zFRpjq__car_card"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_header"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_image"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_actions"
+-                               bis_skin_checked="1"
+                              >
+                            <div
+                              className="listItem_main-module__zFRpjq__car_card"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_header"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_image"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_actions"
+-                               bis_skin_checked="1"
+                              >
+                            <div
+                              className="listItem_main-module__zFRpjq__car_card"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_header"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_image"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="listItem_main-module__zFRpjq__card_actions"
+-                               bis_skin_checked="1"
+                              >
+                      <RegisterForm>
+                        <div
+                          className="register_form-module__Ze0S5a__test_drive_container"
+-                         bis_skin_checked="1"
+                        >
+                          <h1>
+                          <div
+                            className="register_form-module__Ze0S5a__hotline_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="register_form-module__Ze0S5a__phone_icon"
+-                             bis_skin_checked="1"
+                            >
+                            <div
+                              className="register_form-module__Ze0S5a__hotline_info"
+-                             bis_skin_checked="1"
+                            >
+                          ...
+                        <div
+                          className="register_form-module__Ze0S5a__section_grid_container"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="register_form-module__Ze0S5a__promo_image_block"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="register_form-module__Ze0S5a__image_wrapper"
+-                             bis_skin_checked="1"
+                            >
+                              <img>
+                              <div
+                                className="register_form-module__Ze0S5a__promo_badge_overlay"
+-                               bis_skin_checked="1"
+                              >
+                                <div
+                                  className={undefined}
+-                                 bis_skin_checked="1"
+                                >
+                                  <p>
+                                  <div
+                                    className="register_form-module__Ze0S5a__badge_details"
+-                                   bis_skin_checked="1"
+                                  >
+                          <div
+                            className="register_form-module__Ze0S5a__registration_form_block"
+-                           bis_skin_checked="1"
+                          >
+                            <h2>
+                            <form className={undefined}>
+                              <div
+                                className="register_form-module__Ze0S5a__input_field_group"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="register_form-module__Ze0S5a__input_field_group"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="register_form-module__Ze0S5a__input_field_group"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="register_form-module__Ze0S5a__payment_options_group"
+-                               bis_skin_checked="1"
+                              >
+                              ...
+                    <PromotionBanner>
+                      <div
+                        className="promotion_banner-module__1BNJFG__banner_container"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="promotion_banner-module__1BNJFG__banner_content"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className={undefined}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={undefined}
+-                           bis_skin_checked="1"
+                          >
+                <Footer>
+                  <footer className="footer-mod...">
+                    <div
+                      className="footer-module__pYvrhG__footer_content"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__map_wrapper"
+-                         bis_skin_checked="1"
+                        >
+                      <div
+                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                       bis_skin_checked="1"
+                      >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__social_icons"
+-                         bis_skin_checked="1"
+                        >
+                    <div
+                      className="footer-module__pYvrhG__footer_bottom"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={undefined}
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="footer-module__pYvrhG__footer_nav"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                      <div
+                        className="footer-module__pYvrhG__bottom_right"
+-                       bis_skin_checked="1"
+                      >
+            ...
+
+[00:17:26.234] Browser LOG     /
+[00:17:26.234] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/CSBH-T1.2026-1536x585.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:17:29.091] Browser LOG     /products/1
+[00:17:32.971] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:17:32.973] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:17:32.975] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:17:33.641] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'includes')
+[00:17:52.871] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:52.876] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:17:53.102] Server  LOG     ✓ Compiled in 9ms
+[00:17:55.011] Server  LOG     ✓ Compiled in 10ms
+[00:17:56.302] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <Container fn={function fn}>
+      <PagesDevOverlayBridge>
+        <PagesDevOverlayErrorBoundary>
+          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+            <App pageProps={{}} Component={function ProuctDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+              <MainLayout suppressHydrationWarning={true}>
+                <Header>
+                  <header className="header-mod...">
+                    <div
+                      className="header-module__bEoNOa__header_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="header-module__bEoNOa__logo_section"
+                        onClick={function onClick}
+-                       bis_skin_checked="1"
+                      >
+                      <nav>
+                      <div
+                        className="header-module__bEoNOa__section_header_left"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="header-module__bEoNOa__mobile_toggle"
+                          onClick={function onClick}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="header-module__bEoNOa__search_section"
+-                         bis_skin_checked="1"
+                        >
+                          <button>
+                          <div
+                            className="header-module__bEoNOa__input_form"
+-                           bis_skin_checked="1"
+                          >
+                <main>
+                  <ProuctDetail>
+                    <div
+                      className="product_detail-module__29RdiW__product_detail_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="product_detail-module__29RdiW__product_grid"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="product_detail-module__29RdiW__image_gallery_column"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="product_detail-module__29RdiW__discount_badge"
+-                           bis_skin_checked="1"
+                          >
++                           Giảm giá!
+                          <div
+                            className="product_detail-module__29RdiW__main_image_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="product_detail-module__29RdiW__zoom_icon"
+-                             bis_skin_checked="1"
+                            >
+                          <div
+                            className="product_detail-module__29RdiW__thumbnail_gallery"
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <p>
+                          <h1>
+                          <div
+                            className="product_detail-module__29RdiW__price_section"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__highlight_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__promotion_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__action_buttons"
+-                           bis_skin_checked="1"
+                          >
+                      <div
+                        className="product_depscription"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="tabs_container"
+-                         bis_skin_checked="1"
+                        >
+                          <ul>
+                          <div
+                            className="tab_content"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="animate_fade_in"
+-                             bis_skin_checked="1"
+                            >
+                <Footer>
+                  <footer className="footer-mod...">
+                    <div
+                      className="footer-module__pYvrhG__footer_content"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__map_wrapper"
+-                         bis_skin_checked="1"
+                        >
+                      <div
+                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                       bis_skin_checked="1"
+                      >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__social_icons"
+-                         bis_skin_checked="1"
+                        >
+                    <div
+                      className="footer-module__pYvrhG__footer_bottom"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={undefined}
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="footer-module__pYvrhG__footer_nav"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                      <div
+                        className="footer-module__pYvrhG__bottom_right"
+-                       bis_skin_checked="1"
+                      >
+            ...
+
+[00:17:56.302] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <MainLayout> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:17:59.955] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <Container fn={function fn}>
+      <PagesDevOverlayBridge>
+        <PagesDevOverlayErrorBoundary>
+          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+            <App pageProps={{}} Component={function ProuctDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+              <MainLayout suppressHydrationWarning={true}>
+                <Header>
+                  <header className="header-mod...">
+                    <div
+                      className="header-module__bEoNOa__header_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="header-module__bEoNOa__logo_section"
+                        onClick={function onClick}
+-                       bis_skin_checked="1"
+                      >
+                      <nav>
+                      <div
+                        className="header-module__bEoNOa__section_header_left"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="header-module__bEoNOa__mobile_toggle"
+                          onClick={function onClick}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="header-module__bEoNOa__search_section"
+-                         bis_skin_checked="1"
+                        >
+                          <button>
+                          <div
+                            className="header-module__bEoNOa__input_form"
+-                           bis_skin_checked="1"
+                          >
+                <main>
+                  <ProuctDetail>
+                    <div
+                      className="product_detail-module__29RdiW__product_detail_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="product_detail-module__29RdiW__product_grid"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="product_detail-module__29RdiW__image_gallery_column"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="product_detail-module__29RdiW__discount_badge"
+-                           bis_skin_checked="1"
+                          >
++                           Giảm giá!
+                          <div
+                            className="product_detail-module__29RdiW__main_image_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="product_detail-module__29RdiW__zoom_icon"
+-                             bis_skin_checked="1"
+                            >
+                          <div
+                            className="product_detail-module__29RdiW__thumbnail_gallery"
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <p>
+                          <h1>
+                          <div
+                            className="product_detail-module__29RdiW__price_section"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__highlight_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__promotion_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__action_buttons"
+-                           bis_skin_checked="1"
+                          >
+                      <div
+                        className="product_depscription"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="tabs_container"
+-                         bis_skin_checked="1"
+                        >
+                          <ul>
+                          <div
+                            className="tab_content"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="animate_fade_in"
+-                             bis_skin_checked="1"
+                            >
+                <Footer>
+                  <footer className="footer-mod...">
+                    <div
+                      className="footer-module__pYvrhG__footer_content"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__map_wrapper"
+-                         bis_skin_checked="1"
+                        >
+                      <div
+                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                       bis_skin_checked="1"
+                      >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__social_icons"
+-                         bis_skin_checked="1"
+                        >
+                    <div
+                      className="footer-module__pYvrhG__footer_bottom"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={undefined}
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="footer-module__pYvrhG__footer_nav"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                      <div
+                        className="footer-module__pYvrhG__bottom_right"
+-                       bis_skin_checked="1"
+                      >
+            ...
+
+[00:17:59.955] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <MainLayout> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:18:21.680] Server  LOG     ✓ Compiled in 6ms
+[00:18:33.283] Server  LOG     ✓ Compiled in 7ms
+[00:18:38.200] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <Container fn={function fn}>
+      <PagesDevOverlayBridge>
+        <PagesDevOverlayErrorBoundary>
+          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+            <App pageProps={{}} Component={function ProuctDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+              <MainLayout suppressHydrationWarning={true}>
+                <Header>
+                  <header className="header-mod...">
+                    <div
+                      className="header-module__bEoNOa__header_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="header-module__bEoNOa__logo_section"
+                        onClick={function onClick}
+-                       bis_skin_checked="1"
+                      >
+                      <nav>
+                      <div
+                        className="header-module__bEoNOa__section_header_left"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="header-module__bEoNOa__mobile_toggle"
+                          onClick={function onClick}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="header-module__bEoNOa__search_section"
+-                         bis_skin_checked="1"
+                        >
+                          <button>
+                          <div
+                            className="header-module__bEoNOa__input_form"
+-                           bis_skin_checked="1"
+                          >
+                <main>
+                  <ProuctDetail>
+                    <div
+                      className="product_detail-module__29RdiW__product_detail_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="product_detail-module__29RdiW__product_grid"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="product_detail-module__29RdiW__image_gallery_column"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="product_detail-module__29RdiW__discount_badge"
+-                           bis_skin_checked="1"
+                          >
++                           Giảm giá!
+                          <div
+                            className="product_detail-module__29RdiW__main_image_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="product_detail-module__29RdiW__zoom_icon"
+-                             bis_skin_checked="1"
+                            >
+                          <div
+                            className="product_detail-module__29RdiW__thumbnail_gallery"
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <p>
+                          <h1>
+                          <div
+                            className="product_detail-module__29RdiW__price_section"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__highlight_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__promotion_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__action_buttons"
+-                           bis_skin_checked="1"
+                          >
+                      <div
+                        className="product_depscription"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="tabs_container"
+-                         bis_skin_checked="1"
+                        >
+                          <ul>
+                          <div
+                            className="tab_content"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="animate_fade_in"
+-                             bis_skin_checked="1"
+                            >
+                <Footer>
+                  <footer className="footer-mod...">
+                    <div
+                      className="footer-module__pYvrhG__footer_content"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__map_wrapper"
+-                         bis_skin_checked="1"
+                        >
+                      <div
+                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                       bis_skin_checked="1"
+                      >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__social_icons"
+-                         bis_skin_checked="1"
+                        >
+                    <div
+                      className="footer-module__pYvrhG__footer_bottom"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={undefined}
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="footer-module__pYvrhG__footer_nav"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                      <div
+                        className="footer-module__pYvrhG__bottom_right"
+-                       bis_skin_checked="1"
+                      >
+            ...
+
+[00:18:38.200] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <MainLayout> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:19:16.454] Server  LOG     ✓ Compiled in 11ms
+[00:19:20.209] Server  ERROR   TypeError: Cannot read properties of null (reading 'includes')
+[00:19:20.211] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:19:20.213] Server  ERROR   ⨯ TypeError: Cannot read properties of null (reading 'includes')
+[00:19:21.055] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'includes')
+[00:20:26.264] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:20:26.269] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:20:26.502] Server  LOG     ✓ Compiled in 9ms
+[00:20:28.935] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <Container fn={function fn}>
+      <PagesDevOverlayBridge>
+        <PagesDevOverlayErrorBoundary>
+          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+            <App pageProps={{}} Component={function ProuctDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+              <MainLayout suppressHydrationWarning={true}>
+                <Header>
+                  <header className="header-mod...">
+                    <div
+                      className="header-module__bEoNOa__header_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="header-module__bEoNOa__logo_section"
+                        onClick={function onClick}
+-                       bis_skin_checked="1"
+                      >
+                      <nav>
+                      <div
+                        className="header-module__bEoNOa__section_header_left"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="header-module__bEoNOa__mobile_toggle"
+                          onClick={function onClick}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className={"header-module__bEoNOa__bar "}
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="header-module__bEoNOa__search_section"
+-                         bis_skin_checked="1"
+                        >
+                          <button>
+                          <div
+                            className="header-module__bEoNOa__input_form"
+-                           bis_skin_checked="1"
+                          >
+                <main>
+                  <ProuctDetail>
+                    <div
+                      className="product_detail-module__29RdiW__product_detail_container"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className="product_detail-module__29RdiW__product_grid"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="product_detail-module__29RdiW__image_gallery_column"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="product_detail-module__29RdiW__discount_badge"
+-                           bis_skin_checked="1"
+                          >
++                           Giảm giá!
+                          <div
+                            className="product_detail-module__29RdiW__main_image_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                            <img>
+                            <div
+                              className="product_detail-module__29RdiW__zoom_icon"
+-                             bis_skin_checked="1"
+                            >
+                          <div
+                            className="product_detail-module__29RdiW__thumbnail_gallery"
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <p>
+                          <h1>
+                          <div
+                            className="product_detail-module__29RdiW__price_section"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__highlight_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__promotion_box"
+-                           bis_skin_checked="1"
+                          >
+                          <div
+                            className="product_detail-module__29RdiW__action_buttons"
+-                           bis_skin_checked="1"
+                          >
+                      <div
+                        className="product_depscription"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="tabs_container"
+-                         bis_skin_checked="1"
+                        >
+                          <ul>
+                          <div
+                            className="tab_content"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="animate_fade_in"
+-                             bis_skin_checked="1"
+                            >
+                <Footer>
+                  <footer className="footer-mod...">
+                    <div
+                      className="footer-module__pYvrhG__footer_content"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__map_wrapper"
+-                         bis_skin_checked="1"
+                        >
+                      <div
+                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                       bis_skin_checked="1"
+                      >
+                      <div
+                        className={[...]}
+-                       bis_skin_checked="1"
+                      >
+                        <h3>
+                        <div
+                          className="footer-module__pYvrhG__social_icons"
+-                         bis_skin_checked="1"
+                        >
+                    <div
+                      className="footer-module__pYvrhG__footer_bottom"
+-                     bis_skin_checked="1"
+                    >
+                      <div
+                        className={undefined}
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="footer-module__pYvrhG__footer_nav"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                      <div
+                        className="footer-module__pYvrhG__bottom_right"
+-                       bis_skin_checked="1"
+                      >
+            ...
+
+[00:20:28.935] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2025/01/j7-phev-trang.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:22:34.749] Server  LOG     ✓ Compiled in 15ms
+[00:23:07.680] Server  LOG     ✓ Compiled in 12ms
+[00:23:24.370] Server  LOG     ✓ Compiled in 14ms
+[00:23:31.628] Server  LOG     ✓ Compiled in 11ms
+[00:24:06.808] Server  LOG     ✓ Compiled in 13ms
+[00:24:26.616] Server  LOG     ✓ Compiled in 9ms
+[00:24:52.563] Server  LOG     ✓ Compiled in 11ms
+[00:27:55.064] Server  LOG     ✓ Compiled in 17ms
+[00:28:20.422] Server  LOG     ✓ Compiled in 19ms
+[00:28:20.518] Browser LOG     Refreshing page data due to server-side change
+[00:29:18.320] Server  LOG     ✓ Compiled in 14ms
+[00:29:36.262] Server  LOG     ✓ Compiled in 15ms
+[00:29:36.450] Browser LOG     Refreshing page data due to server-side change
+[00:32:01.784] Server  LOG     ✓ Compiled in 95ms
+[00:32:04.267] Browser ERROR   uncaughtError: TypeError: func is not a function
+[00:32:17.924] Server  LOG     ✓ Compiled in 6ms
+[00:34:55.394] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/CSBH-T1.2026-1536x585.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
