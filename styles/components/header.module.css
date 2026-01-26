@@ -1,0 +1,86 @@
+
+.custom_header {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid #222;
+  font-family: Arial, sans-serif;
+  position: sticky;    
+  top: 0;             
+  left: 0;            
+  width: 100%;       
+  z-index: 1000;
+}
+
+.header_container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.logo_section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo_omoda {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+.divider {
+  width: 1.5px;
+  height: 25px;
+  background-color: #e31b23; 
+  margin: 0 15px;
+}
+
+.logo_jaecoo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+
+.nav_menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav_item {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.active,.nav_item:hover {
+  color: #ffffff;
+}
+
+.search_btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid #333;
+  padding-left: 20px;
+}
+
+@media (max-width: 1100px) {
+  .nav_menu {
+    display: none; 
+  }
+}

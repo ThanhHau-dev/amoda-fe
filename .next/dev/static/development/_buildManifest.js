@@ -5,7 +5,13 @@ self.__BUILD_MANIFEST = {
     "fallback": []
   },
   "sortedPages": [
+    "/",
     "/_app",
-    "/_error"
+    "/_error",
+    "/news",
+    "/news/[slug]",
+    "/products/[slug]",
+    "/register",
+    "/search/[slug]"
   ]
 };self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
