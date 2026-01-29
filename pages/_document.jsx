@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="vi">
+    <Html lang="vi" >
       <Head>
         <meta charSet="UTF-8" />
         <meta
@@ -30,7 +30,7 @@ export default function Document() {
         ></script>
         <script src="https://unpkg.com/scrollreveal" defer></script>
       </Head>
-      <body>
+      <body suppressHydrationWarning={true}>
         <Main />
         <NextScript />
       </body>

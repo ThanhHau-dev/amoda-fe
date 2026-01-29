@@ -1,0 +1,14 @@
+.image_container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.custom_news_image {
+  object-fit: cover;
+  object-position: center;
+}

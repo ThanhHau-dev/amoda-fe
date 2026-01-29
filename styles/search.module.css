@@ -1,0 +1,78 @@
+
+.search_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.section_wrapper {
+  margin-bottom: 50px;
+}
+
+.section_title {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+
+.grid_layout {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.grid_layout_news {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+@media (max-width: 1024px) {
+  .grid_layout, .grid_layout_news {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .grid_layout, .grid_layout_news {
+    grid-template-columns: 1fr; 
+  }
+  
+  .section_title {
+    text-align: center;
+  }
+}
+
+
+.product_card {
+  transition: transform 0.3s ease;
+}
+
+.product_card:hover {
+  transform: translateY(-5px);
+}
+
+.discount_tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 183, 189, 0.8);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}

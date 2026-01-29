@@ -3,23 +3,50 @@ import styles from "../styles/components/header.module.css";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
+import { IoSearchOutline } from "react-icons/io5";
+
+const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const STATIC_MENU = [
+  { title: "BẢNG GIÁ", path: `/price` },
+  { title: "ĐĂNG KÝ LÁI THỬ", path: `/register` },
+  { title: "TIN TỨC", path: `/news` },
+  // { title: "TUYỂN DỤNG", path: `/#` },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuItems, setMenuItems] = useState(STATIC_MENU);
+  const [search_text, setSearch_text] = useState("");
   const pathname = usePathname();
   const router = useRouter();
-  const menuItems = [
-    { title: "OMODA C5", path: `/products/1` },
-    { title: "JAECOO J7", path: `/products/2` },
-    { title: "JAECOO J7 AWD", path: `/products/3` },
-    { title: "JAECOO J7 PHEV", path: `/products/4` },
 
-    { title: "BẢNG GIÁ", path: `/price` },
-    { title: "ĐĂNG KÝ LÁI THỬ", path: `/register` },
-    { title: "TIN TỨC", path: `/news` },
-    { title: "TUYỂN DỤNG", path: `/#` },
-  ];
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch(`${BE_URL}/products`, {
+        method: "GET",
+        headers: myHeaders,
+      });
+      const res = await response.json();
+      if (res.products && res.products.length > 0) {
+        const productLinks = res.products.map((item) => ({
+          title: item.name,
+          path: `/products/${item.slug}`,
+        }));
+        setMenuItems([...productLinks, ...STATIC_MENU]);
+      }
+    } catch (error) {
+      console.error("Lỗi khi fetch sản phẩm:", error);
+    }
+  };
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fetchProducts();
+  }, []);
 
   return (
     <header className={styles.custom_header}>
@@ -29,7 +56,9 @@ const Header = () => {
           onClick={() => router.replace("/")}
         >
           <span className={styles.logo_omoda}>AMODA</span>
-          <span className={styles.divider}><></></span>
+          <span className={styles.divider}>
+            <></>
+          </span>
           <span className={styles.logo_jaecoo}>JAECOO</span>
         </div>
 
@@ -63,28 +92,27 @@ const Header = () => {
               className={`${styles.bar} ${isMenuOpen ? styles.bar_bot_active : ""}`}
             ></div>
           </div>
+          <form onSubmit={(e) => {
+            e.preventDefault()
+            router.push(`/search/${search_text}`)
+          }}>
+            <div className={styles.search_wrapper}>
+              <div className={styles.search_container}>
+                <input
+                  type="text"
+                  className={styles.search_input}
+                  placeholder="Tìm kiếm..."
+                  value={search_text}
+                  onChange={(e) => setSearch_text(e.target.value)}
+                />
+                <button type="submit" className={styles.icon_box}>
+                  <IoSearchOutline size={22} className={styles.search_icon} />
+                </button>
 
-          <div className={styles.search_section}>
-            <button className={styles.search_btn}>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </button>
-
-            <div className={styles.input_form}>
-              <input type="text" name="" id="" placeholder="Tìm kiếm..." />
-            </div>
-          </div>
+                <button type="submit" style={{ display: "none" }}></button>
+              </div>
+            </div>{" "}
+          </form>
         </div>
       </div>
     </header>

@@ -1,7 +1,7 @@
 import AdminLayout from './layout'
 export default function Dashboard() {
   return (
-    <div>D</div>
+    <div>Comming soon</div>
   )
 }
 

@@ -1,18 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/login.module.css";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+
+const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
 const Login = () => {
-  const router = useRouter()
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+  const [formData, setFormData] = useState({ email: "", otp: "" });
 
   const handleLogin = (e) => {
     e.preventDefault();
-    localStorage.setItem("accessToken", "tesst")
-    if(true){
-      router.push('/admin/products')
-    }
+    fetch(`${BE_URL}/auth/verifyOtp`, {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: myHeaders,
+    })
+      .then((res) => {
+        if (!res.ok) {
+          toast.error("Lỗi khi đăng nhập");
+          return;
+        }
+        return res.json();
+      })
+      .then((res) => {
+        if(res.token)localStorage.setItem("accessToken", res.token);
+        router.push("/admin/products");
+        toast.success(res.message);
+      });
+  };
+
+  const handleSendOtp = () => {
+    fetch(`${BE_URL}/auth/sendOtp`, {
+      method: "POST",
+      body: JSON.stringify({ email: formData.email }),
+      headers: myHeaders,
+    }).then((res) => {
+      if (!res.ok) {
+        toast.error("Lỗi khi gửi Otp");
+        return;
+      }
+      toast.success("Gửi Otp thành công");
+      return res.json();
+    });
   };
 
   return (
@@ -25,73 +57,50 @@ const Login = () => {
 
         <form className={styles.form} onSubmit={handleLogin}>
           <div className={styles.inputGroup}>
-            <input
-              type="email"
-              placeholder="Email Address"
-              className={styles.input}
-              required
-              value={formData.email}
-              onChange={(e) =>
-                setFormData((pre) => ({ ...pre, email: e.target.value }))
-              }
-            />
+            <div className={styles.passwordWrapper}>
+              <input
+                type="email"
+                placeholder="Email Address"
+                className={styles.input}
+                required
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData((pre) => ({ ...pre, email: e.target.value }))
+                }
+              />
+              <button
+                type="button"
+                className={styles.eyeIcon}
+                color="#000"
+                onClick={handleSendOtp}
+              >
+                Gửi mã
+              </button>
+            </div>
           </div>
 
           <div className={styles.inputGroup}>
             <div className={styles.passwordWrapper}>
               <input
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
+                type="text"
+                placeholder="Mã Otp"
                 className={styles.input}
                 required
                 onChange={(e) =>
-                  setFormData((pre) => ({ ...pre, password: e.target.value }))
+                  setFormData((pre) => ({ ...pre, otp: e.target.value }))
                 }
-                value={formData.password}
+                value={formData.otp}
               />
-              <button
-                type="button"
-                className={styles.eyeIcon}
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
             </div>
           </div>
 
-          <div className={styles.options}>
-            <label className={styles.rememberMe}>
-              <input type="checkbox" />
-              <span>Remember me</span>
-            </label>
-            <a href="#" className={styles.forgotPassword}>
-              Forgot password?
-            </a>
-          </div>
-
-          <button type="submit" className={styles.signInBtn}>
+          <button
+            type="submit"
+            className={`${styles.signInBtn} ${formData.otp == "" && styles.disable_btn}`}
+          >
             Sign In
           </button>
         </form>
-
-        <p className={styles.footerText}>
-          Dont have an account?
-          <a href="#" className={styles.createLink}>
-            Create one
-          </a>
-        </p>
       </div>
     </div>
   );
