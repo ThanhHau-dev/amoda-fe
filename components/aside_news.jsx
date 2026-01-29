@@ -1,5 +1,10 @@
 import Link from "next/link";
-import styles from '../styles/components/aside_news.module.css'
+import styles from "../styles/components/aside_news.module.css";
+import { useEffect, useState } from "react";
+
+const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
 const sidebar_news = [
   "Lì Xì Đầu Xuân: Giá Lăn Bánh Omoda C5 & Jaecoo J7 Tháng 1/2026",
@@ -10,14 +15,32 @@ const sidebar_news = [
 ];
 
 export default function AsideNews() {
+  const [listNews, setListNews] = useState([]);
+  const fecthNews = () => {
+    fetch(`${BE_URL}/news `, {
+      method: "GET",
+      headers: myHeaders,
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setListNews(res.blogs);
+      });
+  };
+
+  useEffect(() => {
+    fecthNews();
+  }, []);
+
   return (
     <aside className={styles.sidebar_area}>
       <h3 className={styles.sidebar_heading}>BÀI VIẾT MỚI</h3>
       <ul className={styles.sidebar_list}>
-        {sidebar_news.map((title, index) => (
-          <li key={index} className={styles.sidebar_item}>
-            <Link href={`/news/${1}`} className={styles.sidebar_link}>
-              {title}
+        {listNews.map((item, index) => (
+          <li key={item._id} className={styles.sidebar_item}>
+            <Link href={`/news/${item.slug}`} className={styles.sidebar_link}>
+              {item.nameNews}
             </Link>
           </li>
         ))}

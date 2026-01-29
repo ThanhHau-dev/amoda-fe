@@ -1,75 +1,137 @@
+"use client";
 import AdminLayout from "./layout";
-import React, { useState } from "react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-  Checkbox,
-  Avatar,
-  Typography,
-  Box,
-  Chip,
-  IconButton,
-  TextField,
-  InputAdornment,
-  Button,
-  Stack,
-  Tooltip,
-} from "@mui/material";
-import {
-  Search,
-  FilterList,
-  SwapVert,
-  Add,
-  DeleteOutline,
-  EditOutlined,
-  MoreHoriz,
-  UnfoldMoreOutlined,
-} from "@mui/icons-material";
+import { useEffect, useState } from "react";
+import { Box, TextField, InputAdornment, Button, Stack } from "@mui/material";
+import { Search, FilterList, Add } from "@mui/icons-material";
+import DynamicTable from "../../components/table/dynamicTable";
+import defaultImage from "../../public/image/default-placeholder.png";
+import CreateProduct_Dialog from "../../components/dialogs/form_product";
+import Delete_Dialog from "../../components/dialogs/delete";
+import Image from "next/image";
+import { toast } from "react-toastify";
+import { formatNumber } from "../../utils/formartNumber";
 
-const initialProducts = [
-  {
-    id: 1,
-    name: "Mens T-shirt",
-    category: "Clothes",
-    status: "Out off stock",
-    stock: 449,
-    price: 172.0,
-    img: "https://images.clothes.com/tshirt.jpg",
-    color: "#f5f5f5",
-  },
-  {
-    id: 2,
-    name: "Leather Hand Bag",
-    category: "Bag",
-    status: "In Stock",
-    stock: 223,
-    price: 112.0,
-    img: "https://images.bags.com/leather.jpg",
-    color: "#fff3e0",
-  },
-  {
-    id: 3,
-    name: "Micellar Hyaluronic Aloe Water",
-    category: "Sunscreen",
-    status: "In Stock",
-    stock: 386,
-    price: 40.0,
-    sold: "1.450 Sold",
-    color: "#e0f7fa",
-  },
-];
+const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+
 
 export default function ProductTable() {
-  const [selected, setSelected] = useState([3]); 
+  const [openCreate, setOpenCreate] = useState({
+    editForm: false,
+    item: {},
+    open: false,
+  });
+  const [openDelete, setOpenDelete] = useState({
+    title: "",
+    id: "",
+    open: false,
+  });
+  const [listData, setListData] = useState([]);
+  const userColumns = [
+    {
+      key: "avatarImage",
+      label: "Hình ảnh",
+      render: (value) => (
+        <Box borderRadius={2}>
+          <Image
+            alt="hình ảnh dản phẩm"
+            borderRadius={2}
+            objectFit="cover"
+            width={50}
+            height={50}
+            src={value || defaultImage}
+          />
+        </Box>
+      ),
+    },
+    { key: "name", label: "Tên" },
+    { key: "price", label: "Giá" , render: (value) => formatNumber(value) != "NaN" ? formatNumber(value) : value},
+    { key: "createdAt", label: "Ngày tạo", render: (value) => value ? new Date(value).toLocaleDateString() : "" },
+    {
+      key: "option",
+      label: "",
+      render: (_, row) => (
+        <Box display="flex" justifyContent="right" gap={1}>
+          <Button
+            onClick={() =>
+              setOpenCreate({ open: true, editForm: true, item: row })
+            }
+            variant="contained"
+            sx={{
+              borderRadius: 2,
+              textTransform: "none",
+              bgcolor: "#635BFF",
+              "&:hover": { bgcolor: "#5249f0" },
+            }}
+          >
+            Sửa
+          </Button>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setOpenDelete({ id: row.slug, title: row.name, open: true });
+            }}
+            sx={{
+              borderRadius: 2,
+              textTransform: "none",
+              bgcolor: "#ff3231",
+              "&:hover": { bgcolor: "#d50808" },
+            }}
+          >
+            Xóa
+          </Button>
+        </Box>
+      ),
+    },
+  ];
+
+  const fecthData = () =>
+    fetch(`${BE_URL}/products?limit=1000`, {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("accessToken"),
+      },
+    })
+      .then((res) => res.json())
+      .then((respone) => {
+        if (respone) {
+          setListData(respone.products);
+        }
+      });
+
+  useEffect(() => {
+    fecthData()
+  }, []);
+
+  const handleDelete = (slug) => {
+    if (openDelete.open) {
+      if (!slug) return;
+      const myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      fetch(`${BE_URL}/products/${slug}`, {
+        method: "DELETE",
+        headers: myHeaders,
+      })
+        .then((res) => {
+          if (!res.ok) {
+            toast.error("Lỗi khi xóa sản phẩm");
+            return;
+          }
+          toast.success("Xóa sản phẩm thành công");
+          setOpenDelete({ title: "", id: "", open: false });
+          fecthData()
+          return res.json();
+        })
+        .catch((err) => {
+          toast.error(err);
+        });
+    }
+  };
 
   return (
     <Box sx={{ width: "100%" }}>
-      {/* 1. Toolbar phía trên */}
       <Stack
         direction={{ xs: "column", md: "row" }}
         spacing={2}
@@ -78,7 +140,7 @@ export default function ProductTable() {
         sx={{ mb: 3 }}
       >
         <TextField
-          placeholder="Search..."
+          placeholder="Tìm kiếm..."
           size="small"
           sx={{
             bgcolor: "white",
@@ -97,18 +159,6 @@ export default function ProductTable() {
         <Stack direction="row" spacing={1}>
           <Button
             variant="outlined"
-            startIcon={<SwapVert />}
-            sx={{
-              borderRadius: 2,
-              textTransform: "none",
-              color: "#333",
-              borderColor: "#E0E4EC",
-            }}
-          >
-            Sort
-          </Button>
-          <Button
-            variant="outlined"
             startIcon={<FilterList />}
             sx={{
               borderRadius: 2,
@@ -117,11 +167,12 @@ export default function ProductTable() {
               borderColor: "#E0E4EC",
             }}
           >
-            Filter
+            Lọc
           </Button>
           <Button
             variant="contained"
             startIcon={<Add />}
+            onClick={() => setOpenCreate((pre) => ({ ...pre, open: true }))}
             sx={{
               borderRadius: 2,
               textTransform: "none",
@@ -129,172 +180,29 @@ export default function ProductTable() {
               "&:hover": { bgcolor: "#5249f0" },
             }}
           >
-            Add Product
+            Tạo
           </Button>
         </Stack>
       </Stack>
-
-      {/* 2. Container Table */}
-      <TableContainer
-        component={Paper}
-        sx={{
-          borderRadius: 4,
-          boxShadow: "none",
-          border: "1px solid #E0E4EC",
-          overflow: "hidden",
-        }}
-      >
-        <Table sx={{ minWidth: 900 }} aria-label="nexus table">
-          <TableHead sx={{ bgcolor: "#F8F9FE" }}>
-            <TableRow>
-              <TableCell padding="checkbox">
-                <Checkbox size="small" />
-              </TableCell>
-              <TableCell sx={headerStyle}>
-                PRODUCT <UnfoldMoreOutlined sx={{ fontSize: 16, ml: 0.5 }} />
-              </TableCell>
-              <TableCell sx={headerStyle}>CATEGORY</TableCell>
-              <TableCell sx={headerStyle}>STATUS</TableCell>
-              <TableCell sx={headerStyle}>STOCK</TableCell>
-              <TableCell sx={headerStyle}>PRICE</TableCell>
-              <TableCell sx={{ ...headerStyle, textAlign: "right" }}>
-                ACTION
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {initialProducts.map((row) => (
-              <TableRow
-                key={row.id}
-                hover
-                sx={{
-                  bgcolor: selected.includes(row.id) ? "#F8F9FE" : "inherit",
-                  "&:last-child td, &:last-child th": { border: 0 },
-                }}
-              >
-                <TableCell padding="checkbox">
-                  <Checkbox
-                    size="small"
-                    checked={selected.includes(row.id)}
-                    color="success"
-                  />
-                </TableCell>
-
-                {/* Cột Sản phẩm */}
-                <TableCell>
-                  <Stack direction="row" spacing={2} alignItems="center">
-                    <Avatar
-                      variant="rounded"
-                      sx={{
-                        bgcolor: row.color || "#eee",
-                        width: 44,
-                        height: 44,
-                        borderRadius: 2,
-                        border: "1px solid #f0f0f0",
-                      }}
-                      src={row.img}
-                    />
-                    <Box>
-                      <Typography
-                        variant="body2"
-                        sx={{ fontWeight: 700, color: "#1A1C1E" }}
-                      >
-                        {row.name}
-                      </Typography>
-                      {row.brand && (
-                        <Typography variant="caption" color="text.secondary">
-                          {row.brand}
-                        </Typography>
-                      )}
-                    </Box>
-                  </Stack>
-                </TableCell>
-
-                <TableCell>
-                  <Typography variant="body2" color="text.secondary">
-                    {row.category}
-                  </Typography>
-                </TableCell>
-
-                {/* Cột Trạng thái */}
-                <TableCell>
-                  <Chip
-                    label={row.status}
-                    size="small"
-                    sx={{
-                      fontWeight: 600,
-                      fontSize: "0.75rem",
-                      bgcolor:
-                        row.status === "In Stock" ? "#E8F5E9" : "#FFEBEE",
-                      color: row.status === "In Stock" ? "#2E7D32" : "#C62828",
-                      "& .MuiChip-label": { px: 1 },
-                    }}
-                    icon={
-                      <Box
-                        sx={{
-                          width: 6,
-                          height: 6,
-                          borderRadius: "50%",
-                          ml: 1,
-                          bgcolor: "currentColor",
-                        }}
-                      />
-                    }
-                  />
-                </TableCell>
-
-                <TableCell>
-                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
-                    {row.stock}
-                  </Typography>
-                  {row.sold && (
-                    <Typography variant="caption" color="text.secondary">
-                      {row.sold}
-                    </Typography>
-                  )}
-                </TableCell>
-
-                <TableCell>
-                  <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                    ${row.price.toFixed(2)}
-                  </Typography>
-                </TableCell>
-
-                {/* Cột Thao tác */}
-                <TableCell align="right">
-                  <Stack
-                    direction="row"
-                    spacing={0.5}
-                    justifyContent="flex-end"
-                  >
-                    <Tooltip title="Delete">
-                      <IconButton size="small">
-                        <DeleteOutline fontSize="small" />
-                      </IconButton>
-                    </Tooltip>
-                    <Tooltip title="Edit">
-                      <IconButton size="small">
-                        <EditOutlined fontSize="small" />
-                      </IconButton>
-                    </Tooltip>
-                  </Stack>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <DynamicTable columns={userColumns} data={listData} />
+      <CreateProduct_Dialog
+        open={openCreate.open}
+        handleClose={() =>
+          setOpenCreate({ editForm: false, item: {}, open: false })
+        }
+        editForm={openCreate.editForm}
+        item={openCreate.item}
+        reload={()=>fecthData()}
+      />
+      <Delete_Dialog
+        open={openDelete.open}
+        handleClose={() => setOpenDelete({ title: "", id: "", open: false })}
+        title={openDelete.title}
+        func={() => handleDelete(openDelete.id)}
+      />
     </Box>
   );
 }
-
-const headerStyle = {
-  fontWeight: 700,
-  fontSize: "0.75rem",
-  color: "#666",
-  letterSpacing: "0.5px",
-  py: 2,
-};
 
 ProductTable.getLayout = function getLayout(page) {
   return <AdminLayout>{page}</AdminLayout>;

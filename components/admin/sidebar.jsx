@@ -1,6 +1,8 @@
+'use client'
 import { MdSpaceDashboard } from "react-icons/md";
 import { AiFillProduct } from "react-icons/ai";
 import { FaRegNewspaper } from "react-icons/fa6";
+import { IoImagesOutline } from "react-icons/io5";
 
 
 import {
@@ -16,19 +18,24 @@ import { usePathname, useRouter } from "next/navigation";
 
 const sideBarConfigs = [
   {
-    title: "Dashboard",
+    title: "Bảng thống kê",
     icon: <MdSpaceDashboard size={24}/>,
     path: "/dashboard",
   },
   {
-    title: "Product",
+    title: "Sản phẩm",
     icon: <AiFillProduct size={24}/>,
     path: "/products",
   },
   {
-    title: "News",
+    title: "Bảng tin",
     icon: <FaRegNewspaper size={24}/>,
     path: "/news",
+  },
+  {
+    title: "Banner",
+    icon: <IoImagesOutline size={24}/>,
+    path: "/banner",
   },
 ];
 
