@@ -1,5 +1,5 @@
-[00:00:01.414] Server  LOG     ✓ Ready in 1104ms
-[00:00:13.752] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:03.571] Server  LOG     ✓ Ready in 2.8s
+[00:00:08.517] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -12,280 +12,754 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <Container fn={function fn}>
-      <PagesDevOverlayBridge>
-        <PagesDevOverlayErrorBoundary>
-          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
-            <App pageProps={{}} Component={function Index} err={undefined} router={{sdc:{},sbc:{}, ...}}>
-              <MainLayout suppressHydrationWarning={true}>
-                <Header>
-                  <header className="header-mod...">
-                    <div
-                      className="header-module__bEoNOa__header_container"
--                     bis_skin_checked="1"
-                    >
+    <AppContainer>
+      <Container fn={function fn}>
+        <PagesDevOverlayBridge>
+          <PagesDevOverlayErrorBoundary>
+            <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+              <App pageProps={{}} Component={function NewsDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+                <MainLayout suppressHydrationWarning={true}>
+                  <Header>
+                    <header className="header-mod...">
                       <div
-                        className="header-module__bEoNOa__logo_section"
-                        onClick={function onClick}
--                       bis_skin_checked="1"
-                      >
-                      <nav>
-                      <div
-                        className="header-module__bEoNOa__section_header_left"
+                        className="header-module__bEoNOa__header_container"
 -                       bis_skin_checked="1"
                       >
                         <div
-                          className="header-module__bEoNOa__mobile_toggle"
+                          className="header-module__bEoNOa__logo_section"
                           onClick={function onClick}
 -                         bis_skin_checked="1"
                         >
+                        <nav>
+                        <div
+                          className="header-module__bEoNOa__section_header_left"
+-                         bis_skin_checked="1"
+                        >
                           <div
-                            className={"header-module__bEoNOa__bar "}
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className={"header-module__bEoNOa__bar "}
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className={"header-module__bEoNOa__bar "}
--                           bis_skin_checked="1"
-                          >
-                        <form onSubmit={function onSubmit}>
-                          <div
-                            className="header-module__bEoNOa__search_wrapper"
+                            className="header-module__bEoNOa__mobile_toggle"
+                            onClick={function onClick}
 -                           bis_skin_checked="1"
                           >
                             <div
-                              className="header-module__bEoNOa__search_container"
+                              className={"header-module__bEoNOa__bar "}
 -                             bis_skin_checked="1"
                             >
-                          ...
-                <main>
-                  <Index>
-                    <Slider listSilder={[...]}>
+                            <div
+                              className={"header-module__bEoNOa__bar "}
+-                             bis_skin_checked="1"
+                            >
+                            <div
+                              className={"header-module__bEoNOa__bar "}
+-                             bis_skin_checked="1"
+                            >
+                          <form onSubmit={function onSubmit}>
+                            <div
+                              className="header-module__bEoNOa__search_wrapper"
+-                             bis_skin_checked="1"
+                            >
+                              <div
+                                className="header-module__bEoNOa__search_container"
+-                               bis_skin_checked="1"
+                              >
+                                <input>
+                                <div
+                                  className="header-module__bEoNOa__icon_box"
+-                                 bis_skin_checked="1"
+                                >
+                                ...
+                  <main>
+                    <NewsDetail>
                       <div
-                        className="silder-module__7PWE7W__slider_wrapper"
-                        style={{maxHeight:550}}
+                        className="news-module__Mb4UTW__news_container"
 -                       bis_skin_checked="1"
                       >
                         <div
-                          className="silder-module__7PWE7W__slider_container"
-                          style={{transform:"translateX..."}}
+                          className="news-module__Mb4UTW__news_layout_grid"
 -                         bis_skin_checked="1"
                         >
-                        <button>
-                        <button>
-                        <div
-                          className="silder-module__7PWE7W__pagination_dots"
--                         bis_skin_checked="1"
-                        >
+                          <div
+                            className="news_deatail-module__dvs_1W__container"
+-                           bis_skin_checked="1"
+                          >
+                            <article className="news_deata...">
+                              <header className={undefined}>
+                                <span>
+                                <h1>
+                                <div
+                                  className="news_deatail-module__dvs_1W__divider"
+-                                 bis_skin_checked="1"
+                                >
+                              <section>
+                              <div
+                                className="ImageNext-module__K4LsuG__image_container"
+-                               bis_skin_checked="1"
+                              >
+                              <div
+                                className="news_deatail-module__dvs_1W__custom_description"
+                                dangerouslySetInnerHTML={{__html:""}}
+-                               bis_skin_checked="1"
+                              >
+                          ...
+                    ...
+                  <ContactFloats>
                     <div
-                      className="index-module__LvwIca__content_main"
+                      className="float_button-module__gY_vCq__wrapper"
 -                     bis_skin_checked="1"
                     >
-                      <ListItem_Main listData={[...]}>
+                      <a href="https://fa..." target="_blank" className="float_butt...">
+                        <div
+                          className="float_button-module__gY_vCq__phoneRipple"
+-                         bis_skin_checked="1"
+                        >
++                         {"  "}
+                        ...
+                      <a href="https://za..." target="_blank" className="float_butt...">
+                        <div
+                          className="float_button-module__gY_vCq__phoneRipple"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                      <a href="tel:090123..." className="float_butt...">
+                        <div
+                          className="float_button-module__gY_vCq__phoneRipple"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                  <Footer>
+                    <footer className="footer-mod...">
+                      <div
+                        className="footer-module__pYvrhG__footer_content"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className={[...]}
+-                         bis_skin_checked="1"
+                        >
+                          <h3>
+                          <div
+                            className="footer-module__pYvrhG__map_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                         bis_skin_checked="1"
+                        >
+                        <div
+                          className={[...]}
+-                         bis_skin_checked="1"
+                        >
+                          <h3>
+                          <div
+                            className="footer-module__pYvrhG__social_icons"
+-                           bis_skin_checked="1"
+                          >
+                      <div
+                        className="footer-module__pYvrhG__footer_bottom"
+-                       bis_skin_checked="1"
+                      >
                         <div
                           className={undefined}
 -                         bis_skin_checked="1"
                         >
-                          <h1>
                           <div
-                            className="listItem_main-module__zFRpjq__car_grid"
+                            className="footer-module__pYvrhG__footer_nav"
 -                           bis_skin_checked="1"
                           >
-                      <RegisterForm>
-                        <div
-                          className="register_form-module__Ze0S5a__test_drive_container"
--                         bis_skin_checked="1"
-                        >
-                          <h1>
-                          <div
-                            className="register_form-module__Ze0S5a__hotline_wrapper"
--                           bis_skin_checked="1"
-                          >
-                            <div
-                              className="register_form-module__Ze0S5a__phone_icon"
--                             bis_skin_checked="1"
-                            >
-                            <div
-                              className="register_form-module__Ze0S5a__hotline_info"
--                             bis_skin_checked="1"
-                            >
                           ...
                         <div
-                          className="register_form-module__Ze0S5a__section_grid_container"
+                          className="footer-module__pYvrhG__bottom_right"
+-                         bis_skin_checked="1"
+                        >
+              ...
+
+[00:00:08.518] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:08.686] Browser WARN    Image with src "/_next/static/media/logo-h.d63b5b1c.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:09.023] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769754222486-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:10.328] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:10.479] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769754251562-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:12.368] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:00:12.368] Browser ERROR   Image is missing required "src" property: <img>
+[00:00:51.857] Browser ERROR   A component is changing an uncontrolled input to be controlled. This is likely caused by the value changing from undefined to a defined value, which should not happen. Decide between using a controlled or uncontrolled input element for the lifetime of the component. More info: https://react.dev/link/controlled-components
+[00:00:57.160] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769757434005-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:57.160] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769757437417-Screenshot 2026-01-02 074609.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:57.160] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769757441759-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:34.727] Server  LOG     ✓ Compiled in 157ms
+[00:05:43.323] Server  LOG     ✓ Compiled in 7ms
+[00:06:30.023] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <AppContainer>
+      <Container fn={function fn}>
+        <PagesDevOverlayBridge>
+          <PagesDevOverlayErrorBoundary>
+            <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+              <App pageProps={{}} Component={function ProuctDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+                <MainLayout suppressHydrationWarning={true}>
+                  <Header>
+                    <header className="header-mod...">
+                      <div
+                        className="header-module__bEoNOa__header_container"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="header-module__bEoNOa__logo_section"
+                          onClick={function onClick}
+-                         bis_skin_checked="1"
+                        >
+                        <nav>
+                        <div
+                          className="header-module__bEoNOa__section_header_left"
 -                         bis_skin_checked="1"
                         >
                           <div
-                            className="register_form-module__Ze0S5a__promo_image_block"
+                            className="header-module__bEoNOa__mobile_toggle"
+                            onClick={function onClick}
 -                           bis_skin_checked="1"
                           >
                             <div
-                              className="register_form-module__Ze0S5a__image_wrapper"
+                              className={"header-module__bEoNOa__bar "}
 -                             bis_skin_checked="1"
                             >
-                              <img>
+                            <div
+                              className={"header-module__bEoNOa__bar "}
+-                             bis_skin_checked="1"
+                            >
+                            <div
+                              className={"header-module__bEoNOa__bar "}
+-                             bis_skin_checked="1"
+                            >
+                          <form onSubmit={function onSubmit}>
+                            <div
+                              className="header-module__bEoNOa__search_wrapper"
+-                             bis_skin_checked="1"
+                            >
                               <div
-                                className="register_form-module__Ze0S5a__promo_badge_overlay"
+                                className="header-module__bEoNOa__search_container"
+-                               bis_skin_checked="1"
+                              >
+                                <input>
+                                <div
+                                  className="header-module__bEoNOa__icon_box"
+-                                 bis_skin_checked="1"
+                                >
+                                ...
+                  <main>
+                    <ProuctDetail>
+                      <div
+                        className="product_detail-module__29RdiW__product_detail_container"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className="product_detail-module__29RdiW__product_grid"
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="product_detail-module__29RdiW__image_gallery_column"
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="product_detail-module__29RdiW__discount_badge"
+-                             bis_skin_checked="1"
+                            >
++                             Giảm giá!
+                            <div
+                              className="product_detail-module__29RdiW__main_image_wrapper"
+-                             bis_skin_checked="1"
+                            >
+                              <Slider size={300} listString={[...]} index={0} setIndex={function setIndex}>
+                                <div
+                                  className="silder-module__7PWE7W__slider_wrapper"
+                                  style={{maxHeight:550,minHeight:200}}
+-                                 bis_skin_checked="1"
+                                >
+                                  <div
+                                    className="silder-module__7PWE7W__slider_container"
+                                    style={{transform:"translateX..."}}
+-                                   bis_skin_checked="1"
+                                  >
+                                  <button>
+                                  <button>
+                                  <div
+                                    className="silder-module__7PWE7W__pagination_dots"
+-                                   bis_skin_checked="1"
+                                  >
+                              <div
+                                className="product_detail-module__29RdiW__zoom_icon"
+                                onClick={function onClick}
+-                               bis_skin_checked="1"
+                              >
+                            <div
+                              className="product_detail-module__29RdiW__thumbnail_gallery"
+-                             bis_skin_checked="1"
+                            >
+                          <div
+                            className={undefined}
+-                           bis_skin_checked="1"
+                          >
+                            <h1>
+                            <div
+                              className="product_detail-module__29RdiW__price_section"
+-                             bis_skin_checked="1"
+                            >
+                            <div
+                              className="product_detail-module__29RdiW__promotion_box"
+-                             bis_skin_checked="1"
+                            >
+                            <div
+                              className="product_detail-module__29RdiW__action_buttons"
+-                             bis_skin_checked="1"
+                            >
+                            <div
+                              className="product_detail-module__29RdiW__social_icons"
+-                             bis_skin_checked="1"
+                            >
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <Tabs activeTab={false} func={function func}>
+                            <div
+                              className="tabs-module__B1_CLq__tabs_container"
+-                             bis_skin_checked="1"
+                            >
+                              <ul>
+                              <div
+                                className="tabs-module__B1_CLq__tab_content"
 -                               bis_skin_checked="1"
                               >
                                 <div
                                   className={undefined}
 -                                 bis_skin_checked="1"
                                 >
-                                  <p>
+                          <Specifications silder={[...]}>
+                            <section>
+                              <Slider listString={[...]}>
+                                <div
+                                  className="silder-module__7PWE7W__slider_wrapper"
+                                  style={{maxHeight:550,minHeight:200}}
+-                                 bis_skin_checked="1"
+                                >
                                   <div
-                                    className="register_form-module__Ze0S5a__badge_details"
+                                    className="silder-module__7PWE7W__slider_container"
+                                    style={{transform:"translateX..."}}
 -                                   bis_skin_checked="1"
                                   >
-                          <div
-                            className="register_form-module__Ze0S5a__registration_form_block"
--                           bis_skin_checked="1"
-                          >
-                            <h2>
-                            <form className={undefined} onSubmit={function onSubmit}>
+                                  <button>
+                                  <button>
+                                  <div
+                                    className="silder-module__7PWE7W__pagination_dots"
+-                                   bis_skin_checked="1"
+                                  >
+                              <h4>
                               <div
-                                className="register_form-module__Ze0S5a__input_field_group"
+                                className="specifications-module__gOHTiG__stats_container"
+-                               bis_skin_checked="1"
+                              >
+                                <div
+                                  className="specifications-module__gOHTiG__stat_box"
+-                                 bis_skin_checked="1"
+                                >
+                                <div
+                                  className="specifications-module__gOHTiG__stat_box"
+-                                 bis_skin_checked="1"
+                                >
+                                <div
+                                  className="specifications-module__gOHTiG__stat_box"
+-                                 bis_skin_checked="1"
+                                >
+                                <div
+                                  className="specifications-module__gOHTiG__stat_box"
+-                                 bis_skin_checked="1"
+                                >
+                              <div
+                                className="specifications-module__gOHTiG__desc_section"
+-                               bis_skin_checked="1"
+                              >
+                          <ImageSection item={{title:"", ...}}>
+                            <section className="imageSecti...">
+                              <div
+                                className="imageSection-module__4t57Ja__header_section"
 -                               bis_skin_checked="1"
                               >
                               <div
-                                className="register_form-module__Ze0S5a__input_field_group"
+                                className="imageSection-module__4t57Ja__main_image_wrapper"
 -                               bis_skin_checked="1"
                               >
+                                <div
+                                  className={" ImageNext-module__K4LsuG__auto_height_container"}
+-                                 bis_skin_checked="1"
+                                >
                               <div
-                                className="register_form-module__Ze0S5a__input_field_group"
+                                className="imageSection-module__4t57Ja__features_grid"
 -                               bis_skin_checked="1"
                               >
-                              <div
-                                className="register_form-module__Ze0S5a__payment_options_group"
--                               bis_skin_checked="1"
-                              >
-                              ...
-                    <PromotionBanner>
-                      <div
-                        className="promotion_banner-module__1BNJFG__banner_container"
--                       bis_skin_checked="1"
-                      >
-                        <div
-                          className="promotion_banner-module__1BNJFG__banner_content"
--                         bis_skin_checked="1"
-                        >
-                          <div
-                            className={undefined}
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className={undefined}
--                           bis_skin_checked="1"
-                          >
-                  ...
-                <Footer>
-                  <footer className="footer-mod...">
+                        ...
+                    ...
+                  <ContactFloats>
                     <div
-                      className="footer-module__pYvrhG__footer_content"
+                      className="float_button-module__gY_vCq__wrapper"
 -                     bis_skin_checked="1"
                     >
-                      <div
-                        className={[...]}
--                       bis_skin_checked="1"
-                      >
-                        <h3>
+                      <a href="https://fa..." target="_blank" className="float_butt...">
                         <div
-                          className="footer-module__pYvrhG__map_wrapper"
+                          className="float_button-module__gY_vCq__phoneRipple"
 -                         bis_skin_checked="1"
                         >
-                      <div
-                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
--                       bis_skin_checked="1"
-                      >
-                      <div
-                        className={[...]}
--                       bis_skin_checked="1"
-                      >
-                        <h3>
++                         {"  "}
+                        ...
+                      <a href="https://za..." target="_blank" className="float_butt...">
                         <div
-                          className="footer-module__pYvrhG__social_icons"
--                         bis_skin_checked="1"
-                        >
-                    <div
-                      className="footer-module__pYvrhG__footer_bottom"
--                     bis_skin_checked="1"
-                    >
-                      <div
-                        className={undefined}
--                       bis_skin_checked="1"
-                      >
-                        <div
-                          className="footer-module__pYvrhG__footer_nav"
+                          className="float_button-module__gY_vCq__phoneRipple"
 -                         bis_skin_checked="1"
                         >
                         ...
+                      <a href="tel:090123..." className="float_butt...">
+                        <div
+                          className="float_button-module__gY_vCq__phoneRipple"
+-                         bis_skin_checked="1"
+                        >
+                        ...
+                  <Footer>
+                    <footer className="footer-mod...">
                       <div
-                        className="footer-module__pYvrhG__bottom_right"
+                        className="footer-module__pYvrhG__footer_content"
 -                       bis_skin_checked="1"
                       >
+                        <div
+                          className={[...]}
+-                         bis_skin_checked="1"
+                        >
+                          <h3>
+                          <div
+                            className="footer-module__pYvrhG__map_wrapper"
+-                           bis_skin_checked="1"
+                          >
+                        <div
+                          className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
+-                         bis_skin_checked="1"
+                        >
+                        <div
+                          className={[...]}
+-                         bis_skin_checked="1"
+                        >
+                          <h3>
+                          <div
+                            className="footer-module__pYvrhG__social_icons"
+-                           bis_skin_checked="1"
+                          >
+                      <div
+                        className="footer-module__pYvrhG__footer_bottom"
+-                       bis_skin_checked="1"
+                      >
+                        <div
+                          className={undefined}
+-                         bis_skin_checked="1"
+                        >
+                          <div
+                            className="footer-module__pYvrhG__footer_nav"
+-                           bis_skin_checked="1"
+                          >
+                          ...
+                        <div
+                          className="footer-module__pYvrhG__bottom_right"
+-                         bis_skin_checked="1"
+                        >
+              ...
+
+[00:06:30.023] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:06:30.566] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769754251562-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:33.411] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769757434005-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:33.411] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769757437417-Screenshot 2026-01-02 074609.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:33.411] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769757441759-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:19.316] Server  LOG     ✓ Compiled in 804ms
+[00:07:40.823] Server  LOG     ✓ Compiled in 16ms
+[00:07:46.145] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
+      <App pageProps={{}} Component={function Banner} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+        <MainLayout suppressHydrationWarning={true}>
+          <main>
+            <AdminLayout>
+              <div suppressHydrationWarning={true}>
+                <Box sx={{display:"flex", ...}}>
+                  <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} sx={{display:"flex", ...}}>
+                    <Insertion>
+                    <div
+                      className="MuiBox-root css-bmgqid"
+-                     bis_skin_checked="1"
+                    >
+                      <CssBaseline>
+                      <Box component="nav" sx={{width:{sm:200}, ...}}>
+                        <Styled(div) as="nav" ref={null} className="MuiBox-root" theme={{...}} sx={{width:{sm:200}, ...}}>
+                          <Insertion>
+                          <nav className="MuiBox-roo...">
+                            <Drawer variant="permanent" open={true} onClose={function handleDrawerToggle} sx={{...}}>
+                              <MuiDrawer-docked sx={{...}} className="MuiDrawer-..." ref={null} ...>
+                                <Insertion>
+                                <div
+                                  className="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-155x1to-MuiDrawe..."
+-                                 bis_skin_checked="1"
+                                >
+                                  <MuiDrawer-paper elevation={0} square={true} className="MuiDrawer-..." ref={null} ...>
+                                    <Insertion>
+                                    <Paper elevation={0} square={true} className="MuiDrawer-...">
+                                      <MuiPaper-root as="div" ownerState={{elevation:0, ...}} className="MuiPaper-r..." ...>
+                                        <Insertion>
+                                        <div
+                                          className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-pa..."
+                                          style={{--Paper-shadow:"none"}}
+-                                         bis_skin_checked="1"
+                                        >
+                                          ...
+                                            <div className="bg-sidebar..." suppressHydrationWarning={true}>
+                                              <Box mb={4} sx={{padding:1}} display="flex" justifyContent="center" ...>
+                                                <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} ...>
+                                                  <Insertion>
+                                                  <div
+                                                    className="MuiBox-root css-qvmleg"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                              <Typography>
+                                              ...
+                                                ...
+                                                  <MuiListItemButton-root ref={function useForkRef.useMemo} ...>
+                                                    <Insertion>
+                                                    <ButtonBase href={undefined} component="div" focusVisibleClassName="" ...>
+                                                      <MuiButtonBase-root as="div" className="MuiButtonB..." ...>
+                                                        <Insertion>
+                                                        <div
+                                                          className="MuiButtonBase-root MuiListItemButton-root MuiList..."
+                                                          onBlur={function useEventCallback.useRef}
+                                                          onClick={undefined}
+                                                          onContextMenu={function useEventCallback.useRef}
+                                                          onFocus={function useEventCallback.useRef}
+                                                          onKeyDown={function useEventCallback.useRef}
+                                                          onKeyUp={function useEventCallback.useRef}
+                                                          onMouseDown={function useEventCallback.useRef}
+                                                          onMouseLeave={function useEventCallback.useRef}
+                                                          onMouseUp={function useEventCallback.useRef}
+                                                          onDragLeave={function useEventCallback.useRef}
+                                                          onTouchEnd={function useEventCallback.useRef}
+                                                          onTouchMove={function useEventCallback.useRef}
+                                                          onTouchStart={function useEventCallback.useRef}
+                                                          tabIndex={0}
+                                                          type={undefined}
+                                                          role="button"
+                                                          href={undefined}
+                                                          ref={function useForkRef.useMemo}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <ListItemIcon sx={{minWidth:40}} className="no-active-...">
+                                                            <MuiListItemIcon-root className="MuiListIte..." ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemIcon-root no-active-item css-vxp..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                          <ListItemText primary="Bảng thống kê" ...>
+                                                            <MuiListItemText-root className="MuiListIte..." ref={null} ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemText-root css-cfq8qh-MuiListItem..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                ...
+                                                  <MuiListItemButton-root ref={function useForkRef.useMemo} ...>
+                                                    <Insertion>
+                                                    <ButtonBase href={undefined} component="div" focusVisibleClassName="" ...>
+                                                      <MuiButtonBase-root as="div" className="MuiButtonB..." ...>
+                                                        <Insertion>
+                                                        <div
+                                                          className="MuiButtonBase-root MuiListItemButton-root MuiList..."
+                                                          onBlur={function useEventCallback.useRef}
+                                                          onClick={undefined}
+                                                          onContextMenu={function useEventCallback.useRef}
+                                                          onFocus={function useEventCallback.useRef}
+                                                          onKeyDown={function useEventCallback.useRef}
+                                                          onKeyUp={function useEventCallback.useRef}
+                                                          onMouseDown={function useEventCallback.useRef}
+                                                          onMouseLeave={function useEventCallback.useRef}
+                                                          onMouseUp={function useEventCallback.useRef}
+                                                          onDragLeave={function useEventCallback.useRef}
+                                                          onTouchEnd={function useEventCallback.useRef}
+                                                          onTouchMove={function useEventCallback.useRef}
+                                                          onTouchStart={function useEventCallback.useRef}
+                                                          tabIndex={0}
+                                                          type={undefined}
+                                                          role="button"
+                                                          href={undefined}
+                                                          ref={function useForkRef.useMemo}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <ListItemIcon sx={{minWidth:40}} className="no-active-...">
+                                                            <MuiListItemIcon-root className="MuiListIte..." ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemIcon-root no-active-item css-vxp..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                          <ListItemText primary="Sản phẩm" ...>
+                                                            <MuiListItemText-root className="MuiListIte..." ref={null} ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemText-root css-cfq8qh-MuiListItem..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                ...
+                                                  <MuiListItemButton-root ref={function useForkRef.useMemo} ...>
+                                                    <Insertion>
+                                                    <ButtonBase href={undefined} component="div" focusVisibleClassName="" ...>
+                                                      <MuiButtonBase-root as="div" className="MuiButtonB..." ...>
+                                                        <Insertion>
+                                                        <div
+                                                          className="MuiButtonBase-root MuiListItemButton-root MuiList..."
+                                                          onBlur={function useEventCallback.useRef}
+                                                          onClick={undefined}
+                                                          onContextMenu={function useEventCallback.useRef}
+                                                          onFocus={function useEventCallback.useRef}
+                                                          onKeyDown={function useEventCallback.useRef}
+                                                          onKeyUp={function useEventCallback.useRef}
+                                                          onMouseDown={function useEventCallback.useRef}
+                                                          onMouseLeave={function useEventCallback.useRef}
+                                                          onMouseUp={function useEventCallback.useRef}
+                                                          onDragLeave={function useEventCallback.useRef}
+                                                          onTouchEnd={function useEventCallback.useRef}
+                                                          onTouchMove={function useEventCallback.useRef}
+                                                          onTouchStart={function useEventCallback.useRef}
+                                                          tabIndex={0}
+                                                          type={undefined}
+                                                          role="button"
+                                                          href={undefined}
+                                                          ref={function useForkRef.useMemo}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <ListItemIcon sx={{minWidth:40}} className="no-active-...">
+                                                            <MuiListItemIcon-root className="MuiListIte..." ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemIcon-root no-active-item css-vxp..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                          <ListItemText primary="Bảng tin" ...>
+                                                            <MuiListItemText-root className="MuiListIte..." ref={null} ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemText-root css-cfq8qh-MuiListItem..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                ...
+                                                  <MuiListItemButton-root ref={function useForkRef.useMemo} ...>
+                                                    <Insertion>
+                                                    <ButtonBase href={undefined} component="div" focusVisibleClassName="" ...>
+                                                      <MuiButtonBase-root as="div" className="MuiButtonB..." ...>
+                                                        <Insertion>
+                                                        <div
+                                                          className="MuiButtonBase-root MuiListItemButton-root MuiList..."
+                                                          onBlur={function useEventCallback.useRef}
+                                                          onClick={undefined}
+                                                          onContextMenu={function useEventCallback.useRef}
+                                                          onFocus={function useEventCallback.useRef}
+                                                          onKeyDown={function useEventCallback.useRef}
+                                                          onKeyUp={function useEventCallback.useRef}
+                                                          onMouseDown={function useEventCallback.useRef}
+                                                          onMouseLeave={function useEventCallback.useRef}
+                                                          onMouseUp={function useEventCallback.useRef}
+                                                          onDragLeave={function useEventCallback.useRef}
+                                                          onTouchEnd={function useEventCallback.useRef}
+                                                          onTouchMove={function useEventCallback.useRef}
+                                                          onTouchStart={function useEventCallback.useRef}
+                                                          tabIndex={0}
+                                                          type={undefined}
+                                                          role="button"
+                                                          href={undefined}
+                                                          ref={function useForkRef.useMemo}
+-                                                         bis_skin_checked="1"
+                                                        >
+                                                          <ListItemIcon sx={{minWidth:40}} className="active-item">
+                                                            <MuiListItemIcon-root className="MuiListIte..." ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemIcon-root active-item css-vxp44m..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                                                          <ListItemText primary="Banner" ...>
+                                                            <MuiListItemText-root className="MuiListIte..." ref={null} ...>
+                                                              <Insertion>
+                                                              <div
+                                                                className="MuiListItemText-root css-cfq8qh-MuiListItem..."
+-                                                               bis_skin_checked="1"
+                                                              >
+                      <Box component="main" sx={{flexGrow:1, ...}}>
+                        <Styled(div) as="main" ref={null} className="MuiBox-root" theme={{...}} sx={{flexGrow:1, ...}}>
+                          <Insertion>
+                          <main className="MuiBox-roo...">
+                            <Banner>
+                              <Box sx={{width:"100%"}}>
+                                <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} ...>
+                                  <Insertion>
+                                  <div
+                                    className="MuiBox-root css-8atqhb"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <Grid direction={{xs:"column", ...}} spacing={2} justifyContent="right" ...>
+                                      <MuiStack-root as="div" ownerState={{...}} ref={null} className="MuiStack-root" ...>
+                                        <Insertion>
+                                        <div
+                                          className="MuiStack-root css-68ngav-MuiStack-root"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <Grid direction="row" spacing={1}>
+                                            <MuiStack-root as="div" ownerState={{...}} ref={null} ...>
+                                              <Insertion>
+                                              <div
+                                                className="MuiStack-root css-niqf4j-MuiStack-root"
+-                                               bis_skin_checked="1"
+                                              >
+                                    <Box sx={{display:"flex", ...}}>
+                                      <Styled(div) as="div" ref={null} className="MuiBox-root" theme={{...}} ...>
+                                        <Insertion>
+                                        <div
+                                          className="MuiBox-root css-180zc0d"
+-                                         bis_skin_checked="1"
+                                        >
+                                    ...
             ...
+      ...
 
-[00:00:13.913] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/3.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:07:46.318] Browser WARN    Image with src "/_next/static/media/logo-h.d63b5b1c.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:00:13.913] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 1
-[00:00:20.336] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:01:01.664] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:01.664] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769654109149-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:16.708] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769616005580-Screenshot%202026-01-01%20073003.png" 404
-[00:01:16.717] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769616297607-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" 404
-[00:01:16.767] Server  ERROR   Error: "url" parameter is valid but upstream response is invalid
-[00:01:16.768] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615734128-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" 404
-[00:01:16.771] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615758548-Screenshot%202026-01-01%20073003.png" 404
-[00:01:16.772] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
-
-Check the render method of `SearchPage`. 
-[00:01:16.789] Server  ERROR   Error: "url" parameter is valid but upstream response is invalid
-[00:01:16.806] Server  ERROR   Error: "url" parameter is valid but upstream response is invalid
-[00:01:34.882] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769615758548-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:52.245] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:52.588] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769615758548-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:01:57.839] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769654109149-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:17.983] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
-
-Check the render method of `SearchPage`. 
-[00:03:17.983] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769655691759-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:17.983] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769659020395-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:17.983] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769621389409-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:17.983] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769616297607-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:17.983] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769616005580-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:17.983] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769615734128-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:20.352] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769658989766-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:20.352] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769615721611-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:47.837] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615772271-Screenshot%202026-01-01%20073003.png" 404
-[00:03:47.848] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615781041-Screenshot%202026-01-01%20073003.png" 404
-[00:03:48.003] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769653952556-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:48.204] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769653967282-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:03:56.994] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:04:02.109] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615772271-Screenshot%202026-01-01%20073003.png" 404
-[00:04:02.110] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615781041-Screenshot%202026-01-01%20073003.png" 404
-[00:07:17.959] Server  LOG     ✓ Compiled in 94ms
-[00:07:17.968] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615772271-Screenshot%202026-01-01%20073003.png" 404
-[00:07:25.328] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:07:56.358] Server  LOG     ✓ Compiled in 75ms
-[00:08:02.745] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:08:07.620] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/1.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+[00:07:46.318] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769754268865-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
 Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
-[00:08:07.620] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/1.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:08:10.526] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:08:17.660] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:08:20.313] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615772271-Screenshot%202026-01-01%20073003.png" 404
-[00:08:20.324] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615781041-Screenshot%202026-01-01%20073003.png" 404
-[00:08:20.417] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769653952556-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:08:20.417] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769653967282-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:09:27.817] Server  LOG     ✓ Compiled in 21ms
-[00:09:27.832] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615772271-Screenshot%202026-01-01%20073003.png" 404
-[00:09:33.286] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:10:04.001] Server  LOG     ✓ Compiled in 18ms
-[00:10:04.439] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769658989766-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:10:10.032] Server  LOG     ✓ Compiled in 15ms
-[00:10:21.569] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:07:46.318] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. borderRadius borderradius
+[00:07:46.318] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769768433970-Screenshot 2026-01-01 073003.png" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:08:34.283] Server  LOG     ✓ Compiled in 29ms
+[00:09:23.568] Server  LOG     ✓ Compiled in 10ms
+[00:09:34.675] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/3.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:40.151] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -302,262 +776,156 @@ It can also happen if the client has a browser extension installed which messes 
       <PagesDevOverlayBridge>
         <PagesDevOverlayErrorBoundary>
           <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={true}>
-            <App pageProps={{}} Component={function ProuctDetail} err={undefined} router={{sdc:{},sbc:{}, ...}}>
+            <App pageProps={{}} Component={function Login} err={undefined} router={{sdc:{},sbc:{}, ...}}>
               <MainLayout suppressHydrationWarning={true}>
-                <Header>
-                  <header className="header-mod...">
+                <main>
+                  <Login>
                     <div
-                      className="header-module__bEoNOa__header_container"
+                      className="login-module__TltHoW__container"
 -                     bis_skin_checked="1"
                     >
                       <div
-                        className="header-module__bEoNOa__logo_section"
-                        onClick={function onClick}
+                        className="login-module__TltHoW__loginCard"
 -                       bis_skin_checked="1"
                       >
-                      <nav>
-                      <div
-                        className="header-module__bEoNOa__section_header_left"
--                       bis_skin_checked="1"
-                      >
-                        <div
-                          className="header-module__bEoNOa__mobile_toggle"
-                          onClick={function onClick}
--                         bis_skin_checked="1"
-                        >
+                        <h1>
+                        <p>
+                        <form className="login-modu..." onSubmit={function handleLogin}>
                           <div
-                            className={"header-module__bEoNOa__bar "}
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className={"header-module__bEoNOa__bar "}
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className={"header-module__bEoNOa__bar "}
--                           bis_skin_checked="1"
-                          >
-                        <form onSubmit={function onSubmit}>
-                          <div
-                            className="header-module__bEoNOa__search_wrapper"
+                            className={undefined}
 -                           bis_skin_checked="1"
                           >
                             <div
-                              className="header-module__bEoNOa__search_container"
+                              className="login-module__TltHoW__passwordWrapper"
+-                             bis_skin_checked="1"
+                            >
+                          <div
+                            className={undefined}
+-                           bis_skin_checked="1"
+                          >
+                            <div
+                              className="login-module__TltHoW__passwordWrapper"
 -                             bis_skin_checked="1"
                             >
                           ...
-                <main>
-                  <ProuctDetail>
-                    <div
-                      className="product_detail-module__29RdiW__product_detail_container"
--                     bis_skin_checked="1"
-                    >
-                      <div
-                        className="product_detail-module__29RdiW__product_grid"
--                       bis_skin_checked="1"
-                      >
-                        <div
-                          className="product_detail-module__29RdiW__image_gallery_column"
--                         bis_skin_checked="1"
-                        >
-                          <div
-                            className="product_detail-module__29RdiW__discount_badge"
--                           bis_skin_checked="1"
-                          >
-+                           Giảm giá!
-                          <div
-                            className="product_detail-module__29RdiW__main_image_wrapper"
--                           bis_skin_checked="1"
-                          >
-                            <Slider size={300} listString={[...]} index={0}>
-                              <div
-                                className="silder-module__7PWE7W__slider_wrapper"
-                                style={{maxHeight:300}}
--                               bis_skin_checked="1"
-                              >
-                                <div
-                                  className="silder-module__7PWE7W__slider_container"
-                                  style={{transform:"translateX..."}}
--                                 bis_skin_checked="1"
-                                >
-                                <button>
-                                <button>
-                                <div
-                                  className="silder-module__7PWE7W__pagination_dots"
--                                 bis_skin_checked="1"
-                                >
-                            <div
-                              className="product_detail-module__29RdiW__zoom_icon"
--                             bis_skin_checked="1"
-                            >
-                          <div
-                            className="product_detail-module__29RdiW__thumbnail_gallery"
--                           bis_skin_checked="1"
-                          >
-                        <div
-                          className={undefined}
--                         bis_skin_checked="1"
-                        >
-                          <p>
-                          <h1>
-                          <div
-                            className="product_detail-module__29RdiW__price_section"
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className="product_detail-module__29RdiW__promotion_box"
--                           bis_skin_checked="1"
-                          >
-                          <div
-                            className="product_detail-module__29RdiW__action_buttons"
--                           bis_skin_checked="1"
-                          >
-                      <div
-                        className={undefined}
--                       bis_skin_checked="1"
-                      >
-                        <Tabs activeTab={false} func={function func}>
-                          <div
-                            className="tabs-module__B1_CLq__tabs_container"
--                           bis_skin_checked="1"
-                          >
-                            <ul>
-                            <div
-                              className="tabs-module__B1_CLq__tab_content"
--                             bis_skin_checked="1"
-                            >
-                              <div
-                                className={undefined}
--                               bis_skin_checked="1"
-                              >
-                        <Specifications silder={[...]}>
-                          <section>
-                            <Slider listString={[...]}>
-                              <div
-                                className="silder-module__7PWE7W__slider_wrapper"
-                                style={{maxHeight:550}}
--                               bis_skin_checked="1"
-                              >
-                                <div
-                                  className="silder-module__7PWE7W__slider_container"
-                                  style={{transform:"translateX..."}}
--                                 bis_skin_checked="1"
-                                >
-                                <button>
-                                <button>
-                                <div
-                                  className="silder-module__7PWE7W__pagination_dots"
--                                 bis_skin_checked="1"
-                                >
-                            <h4>
-                            <div
-                              className="specifications-module__gOHTiG__stats_container"
--                             bis_skin_checked="1"
-                            >
-                              <div
-                                className="specifications-module__gOHTiG__stat_box"
--                               bis_skin_checked="1"
-                              >
-                              <div
-                                className="specifications-module__gOHTiG__stat_box"
--                               bis_skin_checked="1"
-                              >
-                              <div
-                                className="specifications-module__gOHTiG__stat_box"
--                               bis_skin_checked="1"
-                              >
-                              <div
-                                className="specifications-module__gOHTiG__stat_box"
--                               bis_skin_checked="1"
-                              >
-                            <div
-                              className="specifications-module__gOHTiG__desc_section"
--                             bis_skin_checked="1"
-                            >
-                        <ImageSection item={{title:"", ...}}>
-                          <section className="imageSecti...">
-                            <div
-                              className="imageSection-module__4t57Ja__header_section"
--                             bis_skin_checked="1"
-                            >
-                            <div
-                              className="imageSection-module__4t57Ja__main_image_wrapper"
--                             bis_skin_checked="1"
-                            >
-                              <div
-                                className={" ImageNext-module__K4LsuG__image_container"}
--                               bis_skin_checked="1"
-                              >
-                            <div
-                              className="imageSection-module__4t57Ja__features_grid"
--                             bis_skin_checked="1"
-                            >
                   ...
-                <Footer>
-                  <footer className="footer-mod...">
-                    <div
-                      className="footer-module__pYvrhG__footer_content"
--                     bis_skin_checked="1"
-                    >
-                      <div
-                        className={[...]}
--                       bis_skin_checked="1"
-                      >
-                        <h3>
-                        <div
-                          className="footer-module__pYvrhG__map_wrapper"
--                         bis_skin_checked="1"
-                        >
-                      <div
-                        className="footer-module__pYvrhG__footer_column  footer-module__pYvrhG__info_section"
--                       bis_skin_checked="1"
-                      >
-                      <div
-                        className={[...]}
--                       bis_skin_checked="1"
-                      >
-                        <h3>
-                        <div
-                          className="footer-module__pYvrhG__social_icons"
--                         bis_skin_checked="1"
-                        >
-                    <div
-                      className="footer-module__pYvrhG__footer_bottom"
--                     bis_skin_checked="1"
-                    >
-                      <div
-                        className={undefined}
--                       bis_skin_checked="1"
-                      >
-                        <div
-                          className="footer-module__pYvrhG__footer_nav"
--                         bis_skin_checked="1"
-                        >
-                        ...
-                      <div
-                        className="footer-module__pYvrhG__bottom_right"
--                       bis_skin_checked="1"
-                      >
             ...
 
-[00:10:21.624] Server  ERROR   ⨯ "upstream image response failed for" "http://103.15.51.2:4000/uploads/1769615721611-Screenshot%202026-01-01%20073003.png" 404
-[00:12:42.563] Server  LOG     ✓ Compiled in 169ms
-[00:12:43.431] Browser LOG     Refreshing page data due to server-side change
-[00:12:50.330] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769615721611-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:13:05.154] Server  LOG     ✓ Compiled in 168ms
-[00:13:05.437] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769658989766-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:13:05.437] Browser LOG     Refreshing page data due to server-side change
-[00:13:38.073] Server  LOG     ✓ Compiled in 29ms
-[00:13:38.439] Browser LOG     Refreshing page data due to server-side change
-[00:14:05.178] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769659020395-Screenshot 2026-01-01 073003.png" has legacy prop "objectFit". Did you forget to run the codemod?
-Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
-[00:14:05.178] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. borderRadius borderradius
-[00:14:05.178] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769655691759-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
-Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
-[00:14:05.285] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769659020395-Screenshot 2026-01-01 073003.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:10:06.864] Browser WARN    Image with src "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/3.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:14:06.328] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769652538055-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+[00:10:52.869] Server  LOG     ✓ Compiled in 60ms
+[00:10:59.011] Browser WARN    Image with src "/_next/static/media/logo-h.d63b5b1c.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:11:03.406] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has legacy prop "objectFit". Did you forget to run the codemod?
 Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
-[00:14:06.328] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769652741684-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+[00:11:03.406] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. borderRadius borderradius
+[00:11:06.211] Browser WARN    MUI Grid: The `item` prop has been removed and is no longer necessary. You can safely remove it.
+
+[00:11:06.211] Browser WARN    MUI Grid: The `xs` prop has been removed. See https://mui.com/material-ui/migration/upgrade-to-grid-v2/ for migration instructions.
+
+[00:11:06.211] Browser WARN    Image with src "/_next/static/media/default-placeholder.a0b64235.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:11:06.211] Browser WARN    quill:toolbar ignoring attaching to nonexistent format font <select>
+[00:11:06.211] Browser WARN    quill:toolbar ignoring attaching to nonexistent format blockquote <button>
+[00:11:06.212] Browser WARN    quill:toolbar ignoring attaching to nonexistent format code-block <button>
+[00:11:07.205] Browser WARN    quill:toolbar ignoring attaching to nonexistent format font <select>
+[00:11:07.205] Browser WARN    quill:toolbar ignoring attaching to nonexistent format blockquote <button>
+[00:11:07.205] Browser WARN    quill:toolbar ignoring attaching to nonexistent format code-block <button>
+[00:11:19.048] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769649294-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:11:32.948] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769661983-Screenshot 2026-01-01 073003.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:11:36.152] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769661983-Screenshot 2026-01-01 073003.png" has legacy prop "objectFit". Did you forget to run the codemod?
 Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:11:43.475] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769675334-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:11:44.853] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769675334-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:11:52.590] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:11:52.590] Browser ERROR   Image is missing required "src" property: <img>
+[00:12:26.404] Server  LOG     ✓ Compiled in 33ms
+[00:12:39.875] Server  LOG     ✓ Compiled in 32ms
+[00:12:55.796] Server  LOG     ✓ Compiled in 22ms
+[00:13:34.952] Server  LOG     ✓ Compiled in 22ms
+[00:15:36.884] Server  LOG     ✓ Compiled in 566ms
+[00:15:38.612] Browser WARN    Image with src "/_next/static/media/logo-h.d63b5b1c.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:15:38.612] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769661983-Screenshot 2026-01-01 073003.png" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:15:38.612] Browser ERROR   React does not recognize the `%s` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `%s` instead. If you accidentally passed it from a parent component, remove it from the DOM element. borderRadius borderradius
+[00:15:38.612] Browser WARN    Image with src "http://103.15.51.2:4000/uploads/1769769675334-gen-n-z7317171060339_f0680f49028803fd3792714d3e7ad11b.jpg" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:17:18.898] Server  LOG     ✓ Compiled in 24ms
+[00:19:53.010] Server  LOG     ✓ Compiled in 23ms
+[00:19:53.155] Browser ERROR   %o
+
+%s
+
+%s
+ {} The above error occurred in the <SidebarContent> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary.
+[00:19:59.154] Server  LOG     ✓ Compiled in 9ms
+[00:20:16.204] Server  LOG     ✓ Compiled in 17ms
+[00:20:47.970] Server  LOG     ✓ Compiled in 11ms
+[00:21:31.650] Server  LOG     ✓ Compiled in 20ms
+[00:21:49.381] Server  LOG     ✓ Compiled in 13ms
+[00:21:55.448] Server  LOG     ✓ Compiled in 13ms
+[00:22:06.191] Server  LOG     ✓ Compiled in 15ms
+[00:22:55.901] Server  LOG     ✓ Compiled in 191ms
+[00:23:17.007] Server  LOG     ✓ Compiled in 13ms
+[00:23:40.087] Server  LOG     ✓ Compiled in 15ms
+[00:24:10.992] Server  LOG     ✓ Compiled in 14ms
+[00:24:27.159] Server  LOG     ✓ Compiled in 21ms
+[00:25:14.351] Server  LOG     ✓ Compiled in 11ms
+[00:25:23.518] Server  LOG     ✓ Compiled in 20ms
+[00:25:39.102] Server  LOG     ✓ Compiled in 15ms
+[00:26:06.480] Server  LOG     ✓ Compiled in 12ms
+[00:26:16.089] Server  LOG     ✓ Compiled in 19ms
+[00:26:36.663] Server  LOG     ✓ Compiled in 15ms
+[00:27:00.960] Server  LOG     ✓ Compiled in 12ms
+[00:27:17.291] Server  LOG     ✓ Compiled in 11ms
+[00:28:02.311] Server  LOG     ✓ Compiled in 79ms
+[00:28:12.585] Server  LOG     ✓ Compiled in 10ms
+[00:28:37.763] Server  LOG     ✓ Compiled in 167ms
+[00:29:20.823] Server  LOG     ✓ Compiled in 10ms
+[00:29:37.486] Server  LOG     ✓ Compiled in 12ms
+[00:30:44.086] Server  LOG     ✓ Compiled in 31ms
+[00:32:02.778] Server  LOG     ✓ Compiled in 14ms
+[00:32:16.411] Server  LOG     ✓ Compiled in 12ms
+[00:32:29.016] Browser ERROR   uncaughtError: ReferenceError: BE_URL is not defined
+[00:32:53.698] Server  LOG     ✓ Compiled in 65ms
+[00:32:58.786] Server  ERROR   PageNotFoundError: Cannot find module for page: /admin/login
+[00:33:02.015] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <Container fn={function fn}>
+      <PagesDevOverlayBridge>
+        <PagesDevOverlayErrorBoundary>
+          <PathnameContextProviderAdapter router={{sdc:{},sbc:{}, ...}} isAutoExport={false}>
+            <App pageProps={{statusCode:404, ...}} Component={function ErrorPage} err={undefined} ...>
+              <MainLayout suppressHydrationWarning={true}>
+                <main>
+                  <ErrorPage statusCode={404} hostname="localhost">
+                    <div
+                      style={{fontFamily:"system-ui,...",height:"100vh",textAlign:"center",display:"flex",flexDirection:"column", ...}}
+-                     bis_skin_checked="1"
+                    >
+                      <Head>
+                      <div
+                        style={{lineHeight:"48px"}}
+-                       bis_skin_checked="1"
+                      >
+                        <style>
+                        <h1>
+                        <div
+                          style={{display:"inline-block"}}
+-                         bis_skin_checked="1"
+                        >
+                  ...
+            ...
+

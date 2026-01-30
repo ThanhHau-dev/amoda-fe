@@ -28,36 +28,7 @@ const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
-const productData = {
-  category: "Ô TÔ JAECOO",
-  name: "JAECOO J7 PHEV",
-  oldPrice: "969.000.000 VNĐ",
-  newPrice: "879.000.000 VNĐ",
-  priceDetails: [
-    { model: "Jaecoo J7 Xăng FWD", price: "729.000.000 VNĐ" },
-    { model: "Jaecoo J7 Xăng AWD", price: "819.000.000 VNĐ" },
-    { model: "Phev SHS", price: "879.000.000 VNĐ" },
-  ],
-  promotions: [
-    { text: "Jaecoo J7 Xăng FWD (Niêm yết 799 Triệu)", type: "hot" },
-    { text: "Giảm 90% LPTB trừ trực tiếp giá bán xe", type: "checkmark" },
-    { text: "Hỗ trợ lãi suất 0% 12 tháng đầu", type: "checkmark" },
-    { text: "Jaecoo J7 Xăng AWD (Niêm yết 849 Triệu)", type: "hot" },
-    { text: "Ưu đãi giảm 30 Triệu chỉ còn 819 Triệu", type: "checkmark" },
-    { text: "Jaecoo J7 Phev (Niêm yết 969 Triệu)", type: "hot" },
-    { text: "Giảm 90% LPTB trừ trực tiếp giá bán xe", type: "checkmark" },
-    { text: "Hỗ trợ lãi suất 0% 12 tháng đầu", type: "checkmark" },
-    {
-      text: "Tặng app quản lý điều khiển xe từ xa T-Box trị giá ",
-      type: "checkmark",
-    },
-    { text: "Tặng BHTV 2 năm (*có điều kiện)", type: "checkmark" },
-  ],
-  mainImage:
-    "https://omodajaecoohcm.vn/wp-content/uploads/2025/01/j7-phev-trang.png",
-  galleryImages: [],
-  hotline: "0928788889",
-};
+
 
 const mockdata = {
   name: "Tên sản phẩm",
@@ -68,8 +39,8 @@ const mockdata = {
   galleryImages: [],
   detailBlocks: [],
   promotion: "Đây là miêu tả khuyến mãi",
-  createdAt:"",
-  updatedAt:"",
+  createdAt: "",
+  updatedAt: "",
 };
 
 const initDetalBlock = {
@@ -129,7 +100,7 @@ const CreateProduct_Dialog = ({
     }));
   };
 
-  const handleAddFeature = (currnetIndex, value = "" , ) => {
+  const handleAddFeature = (currnetIndex, value = "") => {
     setFormData((prev) => ({
       ...prev,
       detailBlocks: prev.detailBlocks.map((section, index) =>
@@ -250,7 +221,6 @@ const CreateProduct_Dialog = ({
         body: JSON.stringify({
           ...formData,
           price: formData.price ? Number(formData.price) : 0,
-          
         }),
         headers: myHeaders,
       });
@@ -277,15 +247,13 @@ const CreateProduct_Dialog = ({
           editForm ? "Cập nhật sản phẩm" : "Tạo sản phẩm thành công",
         );
         reload();
-        handleClose();
+        Close();
         return res.json();
       })
       .catch((err) => {});
   };
 
-
   const handleDeleteImage = (index) => {
-
     setFormData((pre) => ({
       ...pre,
       galleryImages: pre.galleryImages.filter((_, i) => i != index),
@@ -296,19 +264,20 @@ const CreateProduct_Dialog = ({
   return (
     <Dialog
       open={open}
-      onClose={Close}
+      onClose={() => Close()}
       fullScreen
       PaperProps={{
         sx: {
           borderRadius: fullScreen ? 0 : "10px",
-          padding: "16px",
-          maxWidth: "800px",
+          padding: "8px",
+          maxWidth: "850px",
+          maxHeight: "90vh",
         },
       }}
     >
       <IconButton
         aria-label="close"
-        onClick={handleClose}
+        onClick={() => Close()}
         sx={{
           position: "absolute",
           right: 16,
@@ -329,10 +298,9 @@ const CreateProduct_Dialog = ({
         <div className={styles.product_detail_container}>
           <div className={styles.product_grid}>
             <div className={styles.image_gallery_column}>
-              <div className={styles.discount_badge}>Giảm giá!</div>
               <div className={styles.main_image_wrapper}>
                 <Slider
-                  size={200}
+                  style={{ maxHeight: 400, minHeight: 200 }}
                   listString={formData.galleryImages}
                   index={indexImage}
                 />
@@ -376,7 +344,7 @@ const CreateProduct_Dialog = ({
                           ? URL.createObjectURL(imgSrc)
                           : imgSrc
                       }
-                      alt={`${productData.name} - Thumbnail ${index + 1}`}
+                      alt={`${formData.name} - Thumbnail ${index + 1}`}
                       className={`${styles.thumbnail_image} ${indexImage === index ? styles.active : ""}`}
                       onClick={() => setIndexImage(index)}
                     />
@@ -391,12 +359,12 @@ const CreateProduct_Dialog = ({
                         position: "absolute",
                         top: 5,
                         right: 5,
-                        backgroundColor: "rgba(255, 255, 255, 0.7)", 
+                        backgroundColor: "rgba(255, 255, 255, 0.7)",
                         "&:hover": {
-                          backgroundColor: "rgba(255, 0, 0, 0.8)", 
+                          backgroundColor: "rgba(255, 0, 0, 0.8)",
                           color: "white",
                         },
-                        padding: "2px", 
+                        padding: "2px",
                       }}
                     >
                       <CloseIcon fontSize="small" />
@@ -407,12 +375,11 @@ const CreateProduct_Dialog = ({
             </div>
 
             <div className={styles.info_and_promo_column}>
-              <p className={styles.product_category}>{productData.category}</p>
               <h1 className={styles.product_name}>
                 <InlineEdit
                   value={formData.name}
                   variant="h4"
-                  sx={{ fontWeight: "bold", mb: 1, fontSize: 32 }}
+                  sx={{ fontWeight: "bold", mb: 1, fontSize: 25 }}
                   onSave={(val) => handleUpdate("name", val)}
                 />
               </h1>
@@ -435,26 +402,26 @@ const CreateProduct_Dialog = ({
                 </span>
               </div>
 
+              <div className={styles.optionCar}>
+                <h3 className={styles.promo_title}>
+                  <InlineEdit
+                    value={formData.promotion}
+                    variant="span"
+                    sx={{ fontSize: 15 }}
+                    onSave={(val) => handleUpdate("promotion", val)}
+                  />
+                </h3>
+              </div>
+
               <div className={styles.promotion_box}>
                 <h3 className={styles.promo_title}>
                   <InlineEdit
                     value={formData.promotion}
                     variant="span"
+                    sx={{ fontSize: 15 }}
                     onSave={(val) => handleUpdate("promotion", val)}
                   />
                 </h3>
-                <ul className={styles.promo_list}>
-                  {/* {productData.promotions.map((promo, index) => (
-                              <li
-                                key={index}
-                                className={`${styles.promo_item} styles.promo_${promo.type}`}
-                              >
-                                {promo.type === "hot" ? <FaFire /> : <FaCircleCheck />}
-                                &nbsp;
-                                {promo.text}
-                              </li>
-                            ))} */}
-                </ul>
               </div>
             </div>
           </div>
@@ -475,15 +442,15 @@ const CreateProduct_Dialog = ({
                 data={value}
                 item={value}
                 formData={formData}
-                handleUpdate={( newValue) =>
-                  handleBigImage(newValue)
-                }
+                handleUpdate={(newValue) => handleBigImage(newValue)}
                 updateDetailBlock={(field, newValue) =>
                   updateDetailBlock(index, field, newValue)
                 }
                 handleDelete={() => handleDeleteSection(index)}
                 handleCreateChildSection={() => handleAddFeature(index)}
-                handleRemoveImageChile={(indexImage)=>handleRemoveImageChile(index,indexImage)}
+                handleRemoveImageChile={(indexImage) =>
+                  handleRemoveImageChile(index, indexImage)
+                }
                 handleImageChildSection={(file) =>
                   handleImageChildSection(file, index)
                 }
@@ -524,7 +491,7 @@ const CreateProduct_Dialog = ({
 
       <DialogActions sx={{ justifyContent: "flex-end", gap: 1, px: 3, pb: 2 }}>
         <Button
-          onClick={Close}
+          onClick={() => Close()}
           variant="outlined"
           color="error"
           sx={{
@@ -532,9 +499,9 @@ const CreateProduct_Dialog = ({
             textTransform: "none",
             px: 3,
             color: "#ff3231",
-            border: "1px soid #ff3231",
-            "&:hover": { backgroundColor: "#d50808" },
+           
           }}
+          className="btn-red"
         >
           Hủy
         </Button>
@@ -545,11 +512,9 @@ const CreateProduct_Dialog = ({
           sx={{
             borderRadius: 2,
             textTransform: "none",
-
             px: 3,
-            backgroundColor: "#6c5ce7",
-            "&:hover": { backgroundColor: "#5a4ad1" },
           }}
+          className="btn-primary"
         >
           {editForm ? "Cập nhật" : "Tạo "}
         </Button>

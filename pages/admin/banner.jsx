@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AdminLayout from "./layout";
 import DynamicTable from "../../components/table/dynamicTable";
 import Delete_Dialog from "../../components/dialogs/delete";
-import { Box, Button, InputAdornment, Stack, TextField } from "@mui/material";
+import { Box, Button, CircularProgress, InputAdornment, Stack, TextField } from "@mui/material";
 import { Add, FilterList, Search } from "@mui/icons-material";
 import Image from "next/image";
 import defaultImage from "../../public/image/default-placeholder.png";
@@ -34,6 +34,7 @@ export default function Banner() {
     open: false,
   });
   const [listData, setListData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const Columns = [
     {
       key: "imgLink",
@@ -52,12 +53,20 @@ export default function Banner() {
       ),
     },
     { key: "nameTitle", label: "Tên tiêu đề" },
-    { key: "order", label: "Thứ tự" },
+    {
+      key: "order",
+      label: "Thứ tự",
+    },
     {
       key: "option",
       label: "",
       render: (_, row) => (
-        <Box display="flex" justifyContent="right" gap={1}>
+        <Box
+          display="flex"
+          justifyContent="right"
+          gap={1}
+          flexDirection={{ xs: "column", md: "row" }}
+        >
           <Button
             onClick={() =>
               setOpenForm({ open: true, editForm: true, item: row })
@@ -66,9 +75,9 @@ export default function Banner() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              bgcolor: "#635BFF",
-              "&:hover": { bgcolor: "#5249f0" },
+              minWidth: { xs: "100%", md: "auto" },
             }}
+            className="btn-primary" 
           >
             Sửa
           </Button>
@@ -80,9 +89,9 @@ export default function Banner() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              bgcolor: "#ff3231",
-              "&:hover": { bgcolor: "#d50808" },
+
             }}
+            className="btn-red"
           >
             Xóa
           </Button>
@@ -91,7 +100,8 @@ export default function Banner() {
     },
   ];
 
-  const fecthData = () =>
+  const fecthData = () => {
+    setLoading(true);
     fetch(`${BE_URL}/bannerHome?limit=1000`, {
       method: "GET",
       headers: {
@@ -103,9 +113,12 @@ export default function Banner() {
         if (respone) {
           setListData(respone || []);
         }
-      });
+      })
+      .finally(() => setLoading(false));
+  };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fecthData();
   }, []);
 
@@ -139,40 +152,11 @@ export default function Banner() {
       <Stack
         direction={{ xs: "column", md: "row" }}
         spacing={2}
-        justifyContent="space-between"
+        justifyContent="right"
         alignItems={{ xs: "stretch", md: "center" }}
         sx={{ mb: 3 }}
       >
-        <TextField
-          placeholder="Tìm kiếm..."
-          size="small"
-          sx={{
-            bgcolor: "white",
-            borderRadius: 2,
-            width: { md: 300 },
-            "& .MuiOutlinedInput-notchedOutline": { borderColor: "#E0E4EC" },
-          }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Search sx={{ color: "text.secondary" }} />
-              </InputAdornment>
-            ),
-          }}
-        />
         <Stack direction="row" spacing={1}>
-          <Button
-            variant="outlined"
-            startIcon={<FilterList />}
-            sx={{
-              borderRadius: 2,
-              textTransform: "none",
-              color: "#333",
-              borderColor: "#E0E4EC",
-            }}
-          >
-            Lọc
-          </Button>
           <Button
             variant="contained"
             startIcon={<Add />}
@@ -180,15 +164,22 @@ export default function Banner() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              bgcolor: "#635BFF",
-              "&:hover": { bgcolor: "#5249f0" },
+              // bgcolor: "#635BFF",
+              // "&:hover": { bgcolor: "#5249f0" },
             }}
+            className="btn-primary" 
           >
-            Tạo
+            Thêm banner
           </Button>
         </Stack>
       </Stack>
-      <DynamicTable columns={Columns} data={listData} />
+      {loading ? (
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
+          <CircularProgress />
+        </Box>
+      ) : (
+        <DynamicTable columns={Columns} data={listData} />
+      )}
       <CreateBanner_Dialog
         open={openForm.open}
         handleClose={() =>
@@ -196,7 +187,7 @@ export default function Banner() {
         }
         editForm={openForm.editForm}
         item={openForm.item}
-        reload={()=>fecthData()}
+        reload={() => fecthData()}
       />
       <Delete_Dialog
         open={openDelete.open}

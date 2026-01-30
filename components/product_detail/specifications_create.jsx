@@ -6,12 +6,12 @@ import { useState } from "react";
 const mockData = {
   title: "OMODA C5",
   stat: [
-    { num: "145", text: "Công suất, mã lực" },
-    { num: "210", text: "Mô men xoắn, Nm" },
-    { num: "9.9", text: "Tăng tốc lên 100 km/h, giây" },
-    { num: "7.85", text: "Tiêu thụ nhiên liệu (l/100km)" },
+    { num: "0", text: "Công suất, mã lực" },
+    { num: "0", text: "Mô men xoắn, Nm" },
+    { num: "0", text: "Tăng tốc lên 100 km/h, giây" },
+    { num: "0", text: "Tiêu thụ nhiên liệu (l/100km)" },
   ],
-  desc: "Lấy cảm hứng từ triết lý <strong>Art In Motion</strong>, OMODA C5 là sự hòa quyện táo bạo giữa ý tưởng, màu sắc và ngôn ngữ thiết kế độc đáo. Không chỉ dừng lại ở tính năng, mỗi đường nét của OMODA C5 đềumang giá trị thẩm mỹ vượt thời gian. Những chiếc xe được kiến tạo từ tư duy tiên phong này không chỉ quyến rũ về thị giác, mà còn khơi dậy cảm xúc khi chạm vào và mang đến những hành trình đầy cảm hứng.",
+  desc: "Mô tả ngắn về sản phẩm",
 };
 
 export default function Specifications_Create({
@@ -21,7 +21,7 @@ export default function Specifications_Create({
   const [formdata, setFormData] = useState(data);
   return (
     <section>
-      <Slider size={500} listString={silder} />
+      <Slider style={{ maxHeight: 500, minHeight: 300 }} listString={silder} />
       <h4 className={styles.main_title}>
         <InlineEdit
           value={data.title}

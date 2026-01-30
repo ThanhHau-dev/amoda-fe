@@ -1,0 +1,76 @@
+.wrapper {
+  position: fixed;
+  left: 20px;
+  bottom: 60px; 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.zalo {
+  background-color: #0084ff;
+  /* overflow: hidden; */
+}
+
+.zaloImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone {
+  background-color: #2172bd;
+}
+
+.phoneRipple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #2172bd;
+  animation: ripple 1.5s infinite;
+  z-index: -1;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    right: 15px;
+    bottom: 20px;
+  }
+  .btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}

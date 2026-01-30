@@ -1,0 +1,87 @@
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 6; 
+  overflow: hidden;
+  background-color: #000;
+}
+
+.sliderContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out; 
+}
+
+.bannerItem {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image {
+  object-fit: cover !important; 
+
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background-color: #3b82f6; 
+  color: #ffffff;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+
+.pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot, .dotActive {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  background: #3b82f6;
+  width: 25px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .bannerWrapper {
+    aspect-ratio: 16 / 9; 
+  }
+  .navBtn {
+    width: 35px;
+    height: 35px;
+  }
+}

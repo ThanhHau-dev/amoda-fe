@@ -7,13 +7,14 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  Grid,
   IconButton,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { useCallback, useEffect, useRef, useState } from "react";
-import styles_image from "../../styles/ImageNext.module.css";
+import styles_news from "../../styles/components/dialogs/form_banner.module.css";
 import styles_detail from "../../styles/news_deatail.module.css";
 import CloseIcon from "@mui/icons-material/Close";
 import InlineEdit from "../customs/InlineEdit";
@@ -185,12 +186,13 @@ export default function Form_news({
       open={open}
       onClose={() => Close()}
       disableEnforceFocus
-      fullScreen
+      fullScreen={fullScreen}
       PaperProps={{
         sx: {
           borderRadius: fullScreen ? 0 : "10px",
-          padding: "16px",
-          maxWidth: "800px",
+          padding: "8px",
+          maxWidth: "700px",
+          maxHeight: "90vh",
         },
       }}
     >
@@ -214,8 +216,8 @@ export default function Form_news({
       </DialogTitle>
 
       <DialogContent sx={{ mt: 3 }}>
-        <div className={styles_detail.container}>
-          <article className={styles_detail.article_wrapper}>
+        <Grid container spacing={4}>
+          <Grid item  size={12}>
             <header className={styles_detail.article_header}>
               <span className={styles_detail.category_tag}>TIN TỨC</span>
               <h1
@@ -230,78 +232,78 @@ export default function Form_news({
               </h1>
               <div className={styles_detail.divider}></div>
             </header>
-
-            <section className={styles_detail.article_content}>
-              <Box mb={5}>
-                <Box
-                  display="grid"
-                  justifyContent="center"
-                  alignItems="center"
-                  width="100%"
-                  mt={3}
-                >
-                  <Image
-                    width={600}
-                    height={300}
-                    
-                    alt={formData.nameNews}
-                    src={formData.imagesAvt || defaultImage}
-                    onClick={() => inputRef.current.click()}
-                    style={{ height: 400, objectFit: "cover" }}
-                  />
-
-                  {/* <div
-                    className={` ${styles_image.image_container}`}
-                    key={index}
-                  >
-                    <Image
-                      src={formData.imagesAvt || defaultImage}
-                      onClick={() => inputRef.current.click()}
-                      alt={"đây là ảnh " + index}
-                      className={`${styles_image.custom_news_image}`}
-                      priority
-                      fill
-                    />
-                  </div> */}
-
-                  <input
-                    type="file"
-                    accept="image/*"
-                    ref={inputRef}
-                    style={{ display: "none" }}
-                    onChange={(e) =>
-                      handleImage(
-                        e.target.files.length != 0 ? e.target.files[0] : null,
-                        (value) =>
-                          setFormData((pre) => ({
-                            ...pre,
-                            imagesAvt: value,
-                          })),
-                      )
-                    }
-                  />
-                </Box>
-              </Box>
-              <Box
-                key={open ? "editor-active" : "editor-inactive"}
-                sx={{
-                  width: "100%",
-                  minHeight: "300px",
-                  mt: 2,
-                  "& .ql-container": { minHeight: "250px" },
-                }}
+          </Grid>
+          <Grid item xs={12} size={12}>
+            <Box className={styles_news.upload_wrapper}>
+              <Typography
+                variant="subtitle2"
+                fontWeight="600"
+                sx={{ mb: 1, color: "#555" }}
               >
-                <QuillEditor
-                  value={formData.dtailDescription}
-                  onChange={(content) =>
-                    handleUpdate("dtailDescription", content)
-                  }
-                  onImageUpload={handleQuillImage}
+                Hình ảnh hiển thị
+              </Typography>
+
+              <Box
+                className={styles_news.image_dropzone}
+                onClick={() => inputRef.current.click()}
+              >
+                <Image
+                  src={formData.imagesAvt || defaultImage}
+                  alt="Slider Preview"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
+                <div className={styles_news.upload_overlay}>
+                  <Typography variant="body2" color="#fff">
+                    Thay đổi ảnh
+                  </Typography>
+                </div>
               </Box>
-            </section>
-          </article>
-        </div>
+
+              <input
+                type="file"
+                accept="image/*"
+                ref={inputRef}
+                style={{ display: "none" }}
+                onChange={(e) =>
+                  e.target.files.length > 0
+                    ? handleImage(e.target.files[0], (url) =>
+                        setFormData((pre) => ({ ...pre, imagesAvt: url })),
+                      )
+                    : null
+                }
+              />
+
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{ mt: 1, display: "block", textAlign: "center" }}
+              >
+                Khuyên dùng kích thước: 1920 x 700 px
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Box
+              key={open ? "editor-active" : "editor-inactive"}
+              sx={{
+                width: "100%",
+                minHeight: "300px",
+                mt: 2,
+                "& .ql-container": { minHeight: "250px" },
+              }}
+            >
+              <QuillEditor
+                value={formData.dtailDescription}
+                onChange={(content) =>
+                  handleUpdate("dtailDescription", content)
+                }
+                onImageUpload={handleQuillImage}
+              />
+            </Box>
+          </Grid>
+        </Grid>
       </DialogContent>
 
       <DialogActions sx={{ justifyContent: "flex-end", gap: 1, px: 3, pb: 2 }}>
@@ -313,10 +315,9 @@ export default function Form_news({
             borderRadius: 2,
             textTransform: "none",
             px: 3,
-            color: "#ff3231",
             border: "1px soid #ff3231",
-            "&:hover": { backgroundColor: "#d50808" },
           }}
+          className="btn-red"
         >
           Hủy
         </Button>
@@ -327,11 +328,10 @@ export default function Form_news({
           sx={{
             borderRadius: 2,
             textTransform: "none",
-
             px: 3,
-            backgroundColor: "#6c5ce7",
-            "&:hover": { backgroundColor: "#5a4ad1" },
           }}
+
+          className="btn-primary"
         >
           {editForm ? "Cập nhật" : "Tạo"}
         </Button>
