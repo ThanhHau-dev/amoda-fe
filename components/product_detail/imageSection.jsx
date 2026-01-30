@@ -19,17 +19,13 @@ export default function ImageSection({ item = detailBlock }) {
       </div>
 
       <div className={styles.main_image_wrapper}>
-        <div className={` ${styles_image.auto_height_container}`}>
+        <div className={` ${styles_image.image_container}`}>
           <Image
             src={item.images[0] || defaultImage}
             alt={item.title}
             className={`${styles_image.custom_news_image}`}
             priority
-            width={1200} 
-            height={450}
-            sizes="100vw"
-            // style={{borderRadius:10}}
-
+            fill
           />
         </div>
       </div>

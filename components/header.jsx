@@ -1,12 +1,10 @@
-"use client";
+'use client'
 import styles from "../styles/components/header.module.css";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoSearchOutline } from "react-icons/io5";
-import logoImg from "../public/image/logo-h.png";
-import Image from "next/image";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -16,6 +14,7 @@ const STATIC_MENU = [
   { title: "BẢNG GIÁ", path: `/price` },
   { title: "ĐĂNG KÝ LÁI THỬ", path: `/register` },
   { title: "TIN TỨC", path: `/news` },
+  // { title: "TUYỂN DỤNG", path: `/#` },
 ];
 
 const Header = () => {
@@ -33,15 +32,10 @@ const Header = () => {
       });
       const res = await response.json();
       if (res.products && res.products.length > 0) {
-        const productLinks = res.products.map((item, index) => {
-          if (index < 3) {
-            return {
-              title: item.name,
-              path: `/products/${item.slug}`,
-            };
-          }
-        });
-
+        const productLinks = res.products.map((item) => ({
+          title: item.name,
+          path: `/products/${item.slug}`,
+        }));
         setMenuItems([...productLinks, ...STATIC_MENU]);
       }
     } catch (error) {
@@ -61,50 +55,26 @@ const Header = () => {
           className={styles.logo_section}
           onClick={() => router.replace("/")}
         >
-          <Image
-            src={logoImg.src}
-            alt="Amoda Logo"
-            className={styles.logo_image}
-            width={250}
-            height={20}
-          />
+          <span className={styles.logo_omoda}>AMODA</span>
+          <span className={styles.divider}>
+            <></>
+          </span>
+          <span className={styles.logo_jaecoo}>JAECOO</span>
         </div>
 
         <nav
           className={`${styles.nav_menu} ${isMenuOpen ? styles.nav_active : ""}`}
         >
-          {menuItems.map((value, index) => (
+          {menuItems.map((item, index) => (
             <Link
               key={index}
-              href={value.path ? value.path : "#"}
+              href={item.path}
               onClick={() => setIsMenuOpen(false)}
-              className={`${styles.nav_item} ${pathname != null && pathname.includes(value.path) ? styles.active : ""}`}
+              className={`${styles.nav_item} ${pathname != null && pathname.includes(item.path) ? styles.active : ""}`}
             >
-              {String(value.title).toLocaleUpperCase()}
+              {item.title}
             </Link>
           ))}
-
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setIsMenuOpen(false);
-              router.push(`/search/${search_text}`);
-            }}
-          >
-            <search className={styles.search}>
-              <input
-                type="search"
-                id="site-search"
-                className={styles.inputSearch}
-                name="q"
-                placeholder="Tìm kiếm..."
-                aria-label="Search through site content"
-                value={search_text}
-                onChange={(e) => setSearch_text(e.target.value)}
-              />
-              <button type="submit" className={styles.buttonSubmit}>Tìm kiếm</button>
-            </search>
-          </form>
         </nav>
 
         <div className={styles.section_header_left}>
@@ -122,13 +92,10 @@ const Header = () => {
               className={`${styles.bar} ${isMenuOpen ? styles.bar_bot_active : ""}`}
             ></div>
           </div>
-
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              router.push(`/search/${search_text}`);
-            }}
-          >
+          <form onSubmit={(e) => {
+            e.preventDefault()
+            router.push(`/search/${search_text}`)
+          }}>
             <div className={styles.search_wrapper}>
               <div className={styles.search_container}>
                 <input
@@ -138,13 +105,13 @@ const Header = () => {
                   value={search_text}
                   onChange={(e) => setSearch_text(e.target.value)}
                 />
-                <div className={styles.icon_box}>
+                <button type="submit" className={styles.icon_box}>
                   <IoSearchOutline size={22} className={styles.search_icon} />
-                </div>
+                </button>
 
                 <button type="submit" style={{ display: "none" }}></button>
               </div>
-            </div>
+            </div>{" "}
           </form>
         </div>
       </div>

@@ -3,7 +3,6 @@ import { usePathname, useRouter } from "next/navigation";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect } from "react";
-import ContactFloats from "../components/dialogs/float_button";
 
 const deny = ["admin", "login"];
 
@@ -23,7 +22,6 @@ export default function MainLayout({ children }) {
     <>
       {!hidden && <Header />}
       <main>{children}</main>
-      {!hidden && <ContactFloats/>}
       {!hidden && <Footer />}
     </>
   );

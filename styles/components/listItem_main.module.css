@@ -37,6 +37,9 @@
   margin-bottom: 5px;
 }
 
+.car_price span {
+  text-decoration: underline;
+}
 
 .car_promo {
   color: #ff3333;
@@ -79,8 +82,8 @@
 }
 
 .btn_action:hover {
-  color: var(--primary-red);
-  /* text-decoration: none; */
+  color: #000;
+  text-decoration: underline;
 }
 
 

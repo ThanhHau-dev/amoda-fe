@@ -1,29 +1,11 @@
 :root {
-  --primary-color: #ffc107;
+  --primary-color: #ffc107; 
   --primary-hover: #0049e6;
-  --text-color: #212121;
-  --bg-light: #ffffff;
-  --bg-accent: #d1faff;
+  --text-color: #212121;     
+  --bg-light: #ffffff;        
+  --bg-accent: #d1faff;       
+  }
 
-  --primary-red: #ff3333;
-
-  --primary-blue: #3b82f6; /* Xanh chủ đạo */
-  --primary-hover: #254670; /* Xanh đậm hơn khi click nút */
-  --light-hover: #f3f4f6; /* Xám nhẹ khi hover dòng bảng */
-
-  /* Sidebar Specific */
-  --sidebar-bg: #000000;
-  --sidebar-item-active: #ffffff; /* Chữ trắng trên nền xanh */
-  --sidebar-text-dim: #9ca3af; /* Chữ xám mờ */
-
-  /* Dashboard Background */
-  --bg-main: #f9fafb; /* Nền xám nhạt toàn trang */
-  --bg-card: #ffffff; /* Nền trắng cho bảng dữ liệu */
-
-  /* Status Colors */
-  --blue-soft: #e0e7ff; /* Màu nền item đang chọn (Bảng tin) */
-  --gray-border: #e5e7eb; /* Màu đường kẻ bảng */
-}
 
 * {
   margin: 0;
@@ -35,75 +17,16 @@ html {
   font-size: clamp(12px, 1.5vw, 16px);
 }
 
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family:'Inter', sans-serif;
 }
+
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.pointer {
-  cursor: pointer;
-}
 
-.bg-sidebar {
-  background-color: var(--sidebar-bg) !important;
-}
 
-.active-item {
-  background-color: var(--primary-blue) !important;
-  color: #ffffff !important;
-}
-
-.no-active-item {
-  color: var(--sidebar-text-dim) !important;
-}
-
-.no-active-item:hover {
-  background-color: var(--primary-hover) !important;
-}
-
-.dim-text {
-  color: var(--sidebar-text-dim);
-}
-
-.bg-dashboard {
-  background-color: var(--bg-main);
-}
-
-.bg-card {
-  background-color: var(--bg-card);
-}
-.text-primary {
-  color: var(--primary-blue);
-}
-.text-red {
-  color: var(--primary-red);
-}
-
-.btn-primary {
-  background-color: var(--primary-blue);
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-}
-
-.btn-red {
-  background-color: var(--primary-red) !important;
-  color: #ffffff !important;
-}
-
-.btn-red-form {
-  background-color: transparent !important;
-  color: var(--primary-red) !important;
-  border: 1px solid var(--primary-red) !important;
-}
-.btn-red-form:hover,
-.btn-red:hover {
-  background-color: #e60000 !important;
-  color: #ffffff !important;
-}

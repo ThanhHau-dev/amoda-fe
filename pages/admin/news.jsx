@@ -1,15 +1,13 @@
 "use client";
 import AdminLayout from "./layout";
 import { useEffect, useState } from "react";
-import { Box, TextField, InputAdornment, Button, Stack, CircularProgress } from "@mui/material";
+import { Box, TextField, InputAdornment, Button, Stack } from "@mui/material";
 import { Search, FilterList, Add } from "@mui/icons-material";
 import DynamicTable from "../../components/table/dynamicTable";
 import Form_news from "../../components/dialogs/form_news";
 import Delete_Dialog from "../../components/dialogs/delete";
 import { toast } from "react-toastify";
-import defaultImage from "../../public/image/default-placeholder.png";
-import Image from "next/image";
-// default-placeholder.png
+
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
@@ -19,7 +17,7 @@ const mockdata = [
     _id: "1",
     nameNews: "1",
     dtailDescription: "1",
-    imagesAvt: "",
+    imagesAvt: "1",
     media: [],
     dateTime: "1",
     slug: "1",
@@ -28,8 +26,6 @@ const mockdata = [
 ];
 export default function NewsTable() {
   const [listData, setListData] = useState(mockdata);
-  const [loading, setLoading] = useState(true);
-  const [searchText, setSearchText] = useState("");
   const [openForm, setOpenForm] = useState({
     editForm: false,
     item: {},
@@ -41,8 +37,7 @@ export default function NewsTable() {
     open: false,
   });
 
-  const fecthData = () => {
-    setLoading(true);
+  const fecthData = () =>
     fetch(`${BE_URL}/news?limit=1000`, {
       method: "GET",
       headers: {
@@ -54,74 +49,21 @@ export default function NewsTable() {
         if (respone) {
           setListData(respone.blogs);
         }
-      })
-      .finally(() => setLoading(false));
-  };
-
-  const fecthSearchData = () => {
-    try {
-      if (searchText != "") {
-        fetch(`${BE_URL}/search `, {
-          method: "POST",
-          body: JSON.stringify({ search: searchText }),
-          headers: myHeaders,
-        })
-          .then((res) => {
-            if (!res.ok) return;
-            return res.json();
-          })
-          .then((res) => {
-            if (res.products && res.news) {
-              setListData(res.news);
-            }
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
+      });
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     fecthData();
   }, []);
 
   const newsColumns = [
-    {
-      key: "imagesAvt",
-      label: "Hình ảnh",
-      render: (value) => (
-        <Box borderRadius={2}>
-          <Image
-            alt="hình ảnh dản phẩm"
-            borderRadius={2}
-            objectFit="cover"
-            width={50}
-            height={50}
-            src={value || defaultImage}
-          />
-        </Box>
-      ),
-    },
+    { key: "_id", label: "Id" },
     { key: "nameNews", label: "Tên bài viết" },
-    {
-      key: "dateTime",
-      label: "Ngày đăng",
-      render: (value) => (value ? new Date(value).toLocaleDateString() : ""),
-    },
+    { key: "dateTime", label: "Ngày đăng" },
     {
       key: "option",
       label: "",
       render: (_, row) => (
-        <Box
-          display="flex"
-          justifyContent="right"
-          gap={1}
-          flexDirection={{ xs: "column", md: "row" }}
-        >
+        <Box display="flex" justifyContent="right" gap={1}>
           <Button
             onClick={() =>
               setOpenForm({ open: true, editForm: true, item: row })
@@ -130,10 +72,9 @@ export default function NewsTable() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              minWidth: { xs: "100%", md: "auto" },
+              bgcolor: "#635BFF",
+              "&:hover": { bgcolor: "#5249f0" },
             }}
-
-            className="btn-primary"
           >
             Sửa
           </Button>
@@ -145,10 +86,9 @@ export default function NewsTable() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              minWidth: { xs: "100%", md: "auto" },
+              bgcolor: "#ff3231",
+              "&:hover": { bgcolor: "#d50808" },
             }}
-
-            className="btn-red"
           >
             Xóa
           </Button>
@@ -173,7 +113,7 @@ export default function NewsTable() {
           }
           toast.success("Xóa tin tức thành công");
           setOpenDelete({ title: "", id: "", open: false });
-          fecthData();
+          fecthData()
           return res.json();
         })
         .catch((err) => {
@@ -191,32 +131,24 @@ export default function NewsTable() {
         alignItems={{ xs: "stretch", md: "center" }}
         sx={{ mb: 3 }}
       >
+        <TextField
+          placeholder="Tìm kiếm..."
+          size="small"
+          sx={{
+            bgcolor: "white",
+            borderRadius: 2,
+            width: { md: 300 },
+            "& .MuiOutlinedInput-notchedOutline": { borderColor: "#E0E4EC" },
+          }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search sx={{ color: "text.secondary" }} />
+              </InputAdornment>
+            ),
+          }}
+        />
         <Stack direction="row" spacing={1}>
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            fecthSearchData();
-          }}>
-          <TextField
-            placeholder="Tìm kiếm..."
-            size="small"
-            value={searchText}
-            onChange={(e)=>setSearchText(e.target.value)}
-            sx={{
-              bgcolor: "white",
-              borderRadius: 2,
-              width: { md: 300 },
-              "& .MuiOutlinedInput-notchedOutline": { borderColor: "#E0E4EC" },
-            }}
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <Search sx={{ color: "text.secondary" }} />
-                </InputAdornment>
-              ),
-            }}
-          />
-          <button type="submit" style={{display:"none"}}></button>
-          </form>
           <Button
             variant="outlined"
             startIcon={<FilterList />}
@@ -229,30 +161,24 @@ export default function NewsTable() {
           >
             Lọc
           </Button>
-        </Stack>
-        <Stack direction="row" spacing={1}>
           <Button
             variant="contained"
             startIcon={<Add />}
-            onClick={() => setOpenForm((pre) => ({ ...pre, open: true }))}
+            onClick={() =>
+              setOpenForm({ editForm: false, item: {}, open: true })
+            }
             sx={{
               borderRadius: 2,
               textTransform: "none",
+              bgcolor: "#635BFF",
+              "&:hover": { bgcolor: "#5249f0" },
             }}
-
-           className="btn-primary" 
           >
-            Thêm bảng tin
+            Tạo
           </Button>
         </Stack>
       </Stack>
-      {loading ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
-          <CircularProgress />
-        </Box>
-      ) : (
-        <DynamicTable columns={newsColumns} data={listData} />
-      )}
+      <DynamicTable columns={newsColumns} data={listData} />
 
       <Form_news
         open={openForm.open}

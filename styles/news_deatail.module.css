@@ -2,7 +2,6 @@
   line-height: 1.6;
   color: #333;
   max-width: 900px;
-  min-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
   background-color: #fff;
@@ -89,12 +88,7 @@
 }
 
 
-@media (max-width: 900px) {
-    .container {
-        min-width: 400px;
-        /* padding: 20px 10px; */
-    }
-  
+@media (max-width: 600px) {
     .custom_description {
         padding: 0 10px;
     }
@@ -127,8 +121,7 @@
 @media (max-width: 600px) {
 
   .container{
-    max-width: 600px;
-    min-width: 300px;
+    max-width: 450px;
   }
 
   .article_title {

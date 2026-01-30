@@ -17,15 +17,15 @@ export default function ListNews() {
   const [totalPages, setTotalPages] = useState(1);
   const limit = 10; 
 
-  const fetchNews = () => {
-    fetch(`${BE_URL}/news?limit=${limit}`, {
+  const fetchNews = (page) => {
+    fetch(`${BE_URL}/news`, {
       method: "GET",
       headers: myHeaders,
     })
       .then((res) => res.json())
       .then((res) => {
         setListNews(res.blogs);
-        setTotalPages(res.totalPages || 1);
+        setTotalPages(res.totalPages || 7);
       });
   };
 

@@ -1,10 +1,8 @@
-import AdminLayout from "./layout";
-import styles from "../../styles/admin/dashboard.module.css";
+import AdminLayout from './layout'
 export default function Dashboard() {
-  return <div className={styles.container}>
-    <h1>Comming soon</h1>
-    
-    </div>;
+  return (
+    <div>Comming soon</div>
+  )
 }
 
 Dashboard.getLayout = function getLayout(page) {

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import styles_image from "../../styles/ImageNext.module.css";
+import styles_image from "../../styles/ImageNext.module.css"
 import Image from "next/image";
 import styles from "../../styles/product_detail.module.css";
 import { FaFire } from "react-icons/fa";
@@ -10,15 +10,10 @@ import Tabs from "../../components/product_detail/tabs";
 import Specifications from "../../components/product_detail/specifications";
 import ImageSection from "../../components/product_detail/imageSection";
 import Slider from "../../components/slider";
-import FormRegister from "../../components/dialogs/form_register"
 import { AiOutlineZoomIn } from "react-icons/ai";
 import { CiGift } from "react-icons/ci";
 import { FaPhone } from "react-icons/fa6";
 import { formatNumber } from "../../utils/formartNumber";
-import { FaFacebookF } from "react-icons/fa";
-import { CiMail } from "react-icons/ci";
-import PopupImage from "../../components/dialogs/popup_img";
-import Link from "next/link";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -84,14 +79,11 @@ export default function ProuctDetail() {
   const router = useRouter();
   const { slug } = router.query;
   const [activeTab, setActiveTab] = useState(false);
-  const [openRegister, setOpenRegister] = useState(false);
-  const [openPopupImage, setOpenPopupImage] = useState(false);
   const [mainDisplayImage, setMainDisplayImage] = useState(
     productData.mainImage,
   );
   const [currentProduct, setCurrentProduct] = useState(mockData);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [realTimeIndex, setRealTimeIndex] = useState(0);
 
   const fecthBanner = () => {
     fetch(`${BE_URL}/products/${slug} `, {
@@ -99,15 +91,11 @@ export default function ProuctDetail() {
       headers: myHeaders,
     })
       .then((res) => {
-        if (!res.ok) {
-          router.replace("/");
-          return;
-        }
         return res.json();
       })
       .then((res) => {
         setCurrentProduct(res);
-        setCurrentIndex(0);
+        setCurrentIndex(0)
       })
       .catch((err) => {
         console.log(err);
@@ -126,23 +114,14 @@ export default function ProuctDetail() {
         <div className={styles.image_gallery_column}>
           <div className={styles.discount_badge}>Giảm giá!</div>
           <div className={styles.main_image_wrapper}>
-            <Slider
-              size={300}
-              listString={currentProduct.galleryImages}
-              index={currentIndex}
-              setIndex={(index) => setRealTimeIndex(index)}
-            />
-            <div className={styles.zoom_icon} onClick={() => setOpenPopupImage(true)}>
+            <Slider size={300} listString={currentProduct.galleryImages} index={currentIndex} />
+            <div className={styles.zoom_icon}>
               <AiOutlineZoomIn />
             </div>
           </div>
           <div className={styles.thumbnail_gallery}>
             {currentProduct.galleryImages.map((imgSrc, index) => (
-              <div
-                className={styles_image.image_container}
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-              >
+              <div className={styles_image.image_container} key={index} onClick={()=>setCurrentIndex(index)}>
                 <Image
                   src={imgSrc}
                   alt={`${styles_image.custom_news_image} ${productData.name} - Thumbnail ${index + 1}`}
@@ -157,11 +136,10 @@ export default function ProuctDetail() {
         </div>
 
         <div className={styles.info_and_promo_column}>
+          <p className={styles.product_category}>Thể loại</p>
           <h1 className={styles.product_name}>{currentProduct.name}</h1>
           <div className={styles.price_section}>
-            <span className={styles.old_price}>
-              {formatNumber(currentProduct.price) + " vnđ"}
-            </span>
+            <span className={styles.old_price}>0</span>
             <span className={styles.current_price}>
               {formatNumber(currentProduct.price) + " vnđ"}
             </span>
@@ -184,7 +162,7 @@ export default function ProuctDetail() {
           </div>
 
           <div className={styles.action_buttons}>
-            <button className={`${styles.btn_action} ${styles.primary_btn}`} onClick={() => setOpenRegister(true)}>
+            <button className={`${styles.btn_action} ${styles.primary_btn}`}>
               <CiGift />
               BÁO GIÁ LĂN BÁNH
             </button>
@@ -196,15 +174,6 @@ export default function ProuctDetail() {
               {productData.hotline}
             </a>
           </div>
-
-          <div className={styles.social_icons}>
-            <Link href="https://www.facebook.com/share_channel/#" className={styles.icon_circle}>
-              <FaFacebookF />
-            </Link>
-            <Link href="mailto:hotro@vidu.com" className={styles.icon_circle}>
-              <CiMail />
-            </Link>
-          </div>
         </div>
       </div>
 
@@ -215,9 +184,6 @@ export default function ProuctDetail() {
           <ImageSection key={index} item={value} />
         ))}
       </div>
-
-      <FormRegister open={openRegister} handleClose={() => setOpenRegister(false)} />
-      <PopupImage open={openPopupImage} handleClose={() => setOpenPopupImage(false)} imageUrl={currentProduct.galleryImages[realTimeIndex]} altText={currentProduct.name} />
     </div>
   );
 }
