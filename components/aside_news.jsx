@@ -17,7 +17,7 @@ const sidebar_news = [
 export default function AsideNews() {
   const [listNews, setListNews] = useState([]);
   const fecthNews = () => {
-    fetch(`${BE_URL}/news `, {
+    fetch(`${BE_URL}/news?limit=10`, {
       method: "GET",
       headers: myHeaders,
     })

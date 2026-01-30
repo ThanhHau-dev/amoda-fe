@@ -17,6 +17,8 @@ import { FaPhone } from "react-icons/fa6";
 import { formatNumber } from "../../utils/formartNumber";
 import { FaFacebookF } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
+import PopupImage from "../../components/dialogs/popup_img";
+import Link from "next/link";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -83,11 +85,13 @@ export default function ProuctDetail() {
   const { slug } = router.query;
   const [activeTab, setActiveTab] = useState(false);
   const [openRegister, setOpenRegister] = useState(false);
+  const [openPopupImage, setOpenPopupImage] = useState(false);
   const [mainDisplayImage, setMainDisplayImage] = useState(
     productData.mainImage,
   );
   const [currentProduct, setCurrentProduct] = useState(mockData);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [realTimeIndex, setRealTimeIndex] = useState(0);
 
   const fecthBanner = () => {
     fetch(`${BE_URL}/products/${slug} `, {
@@ -126,8 +130,9 @@ export default function ProuctDetail() {
               size={300}
               listString={currentProduct.galleryImages}
               index={currentIndex}
+              setIndex={(index) => setRealTimeIndex(index)}
             />
-            <div className={styles.zoom_icon}>
+            <div className={styles.zoom_icon} onClick={() => setOpenPopupImage(true)}>
               <AiOutlineZoomIn />
             </div>
           </div>
@@ -193,15 +198,12 @@ export default function ProuctDetail() {
           </div>
 
           <div className={styles.social_icons}>
-            <a href="#" className={styles.icon_circle}>
+            <Link href="https://www.facebook.com/share_channel/#" className={styles.icon_circle}>
               <FaFacebookF />
-            </a>
-            <a href="#" className={styles.icon_circle}>
+            </Link>
+            <Link href="mailto:hotro@vidu.com" className={styles.icon_circle}>
               <CiMail />
-            </a>
-            <a href="#" className={styles.icon_circle}>
-              <FaPhone />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -215,6 +217,7 @@ export default function ProuctDetail() {
       </div>
 
       <FormRegister open={openRegister} handleClose={() => setOpenRegister(false)} />
+      <PopupImage open={openPopupImage} handleClose={() => setOpenPopupImage(false)} imageUrl={currentProduct.galleryImages[realTimeIndex]} altText={currentProduct.name} />
     </div>
   );
 }

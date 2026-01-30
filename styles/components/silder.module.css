@@ -69,9 +69,6 @@
   transition: 0.3s;
 }
 
-.nav_btn:hover {
-  /* background: rgba(229, 229, 229, 0.934); */
-}
 
 .prev_btn {  left: 20px }
 .next_btn { right: 20px; }

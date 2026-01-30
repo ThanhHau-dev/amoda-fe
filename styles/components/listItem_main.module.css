@@ -79,7 +79,7 @@
 }
 
 .btn_action:hover {
-  color: #000;
+  color: var(--primary-red);
   /* text-decoration: none; */
 }
 

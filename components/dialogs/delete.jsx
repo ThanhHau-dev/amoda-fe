@@ -6,23 +6,18 @@ import {
   Typography,
   IconButton,
   Button,
-  useMediaQuery,
-  useTheme,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Delete_Dialog = ({ open, handleClose, func = () => {}, title = "" }) => {
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
   return (
     <Dialog
       open={open}
       onClose={handleClose}
-      fullScreen={fullScreen}
+      maxWidth="xs"
       PaperProps={{
         sx: {
-          borderRadius: fullScreen ? 0 : "10px",
+          borderRadius:  "10px",
           padding: "16px",
           width: "100%",
           maxWidth:"450px"

@@ -25,6 +25,7 @@ const Slider = ({
     minHeight: 200,
   },
   index = 0,
+  setIndex = () => {}
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentList = useMemo(() => {
@@ -35,6 +36,7 @@ const Slider = ({
     setCurrentIndex(index);
   }, [index]);
 
+ 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === currentList.length - 1 ? 0 : prev + 1));
   };
@@ -44,10 +46,12 @@ const Slider = ({
   };
 
   useEffect(() => {
+    setIndex(currentIndex);
     if (currentList.length != 0) {
       const timer = setInterval(nextSlide, 5000);
       return () => clearInterval(timer);
     }
+    
   }, [currentIndex]);
 
   return (

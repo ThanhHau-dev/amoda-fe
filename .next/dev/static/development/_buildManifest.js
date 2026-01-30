@@ -5,6 +5,9 @@ self.__BUILD_MANIFEST = {
   "/_error": [
     "static/chunks/pages/_error.js"
   ],
+  "/admin/banner": [
+    "static/chunks/pages/admin/banner.js"
+  ],
   "/admin/dashboard": [
     "static/chunks/pages/admin/dashboard.js"
   ],
@@ -13,6 +16,9 @@ self.__BUILD_MANIFEST = {
   ],
   "/admin/products": [
     "static/chunks/pages/admin/products.js"
+  ],
+  "/login": [
+    "static/chunks/pages/login.js"
   ],
   "/news": [
     "static/chunks/pages/news.js"
@@ -28,9 +34,6 @@ self.__BUILD_MANIFEST = {
   ],
   "/register": [
     "static/chunks/pages/register.js"
-  ],
-  "/search/[slug]": [
-    "static/chunks/pages/search/[slug].js"
   ],
   "__rewrites": {
     "afterFiles": [],

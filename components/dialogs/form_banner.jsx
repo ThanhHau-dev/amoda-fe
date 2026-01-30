@@ -14,7 +14,7 @@ import {
   Grid,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import styles_slider from "../../styles/components/form_banner.module.css";
+import styles_slider from "../../styles/components/dialogs/form_banner.module.css";
 import defaultImage from "../../public/image/default-placeholder.png";
 
 import Image from "next/image";
@@ -155,7 +155,7 @@ const CreateBanner_Dialog = ({
 
       <DialogTitle sx={{ pb: 0, pt: 2 }}>
         <Typography variant="span" fontWeight="600" color="text.primary">
-          {editForm ? "Cập nhật sản phẩm" : "Tạo sản phẩm"}
+          {editForm ? "Cập nhật banner" : "Thêm banner"}
         </Typography>
       </DialogTitle>
 
@@ -260,15 +260,14 @@ const CreateBanner_Dialog = ({
         <Button
           onClick={Close}
           variant="outlined"
-          color="error"
           sx={{
             borderRadius: 2,
             textTransform: "none",
             px: 3,
-            color: "#ff3231",
             border: "1px soid #ff3231",
-            "&:hover": { backgroundColor: "#d50808" },
           }}
+
+          className="btn-red-form"
         >
           Hủy
         </Button>
@@ -281,9 +280,11 @@ const CreateBanner_Dialog = ({
             textTransform: "none",
 
             px: 3,
-            backgroundColor: "#6c5ce7",
-            "&:hover": { backgroundColor: "#5a4ad1" },
+            // backgroundColor: "#6c5ce7",
+            // "&:hover": { backgroundColor: "#5a4ad1" },
           }}
+
+          className="btn-primary"
         >
           {editForm ? "Cập nhật" : "Tạo "}
         </Button>

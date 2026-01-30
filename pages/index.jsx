@@ -5,6 +5,7 @@ import RegisterForm from "@/components/register_form";
 import PromotionBanner from "@/components/promotio_banner";
 import styles from "@/styles/index.module.css";
 import { useEffect, useState } from "react";
+import BannerSlider from "@/components/silder_banner";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -53,7 +54,9 @@ export default function Index() {
 
   return (
     <>
-      <Slider listSilder={listBanner}  />
+      {/* <Slider listSilder={listBanner}  /> */}
+
+      <BannerSlider data={listBanner} />
       <div className={styles.content_main}>
         <ListItem_Main listData={listProduct} />
         <RegisterForm />

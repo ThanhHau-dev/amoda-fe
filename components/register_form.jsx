@@ -13,8 +13,8 @@ export default function RegisterForm() {
   const [listProduct, setListProduct] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
-    selected: "",
+    contact: "",
+    message: "",
     installment: false,
   });
 
@@ -34,7 +34,7 @@ export default function RegisterForm() {
   useEffect(() => {
     fecthProducts();
   }, []);
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     fetch(`${BE_URL}/email/businessCustomers/ `, {
       method: "POST",
       body: JSON.stringify(formData),
@@ -137,8 +137,8 @@ export default function RegisterForm() {
                 placeholder="Di động *"
                 required
                 className={styles.text_input}
-                value={formData.phone}
-                onChange={(e) => handleUpdate("phone", e.target.value)}
+                value={formData.contact}
+                onChange={(e) => handleUpdate("contact", e.target.value)}
               />
             </div>
 
@@ -147,18 +147,16 @@ export default function RegisterForm() {
                 <IoSearch />
               </span>
               <select
-                value={formData.selected}
+                value={formData.message}
                 className={styles.select_input}
-                onChange={(e) =>
-                  handleUpdate("selected", e.currentTarget.value)
-                }
+                onChange={(e) => handleUpdate("message", e.currentTarget.value)}
               >
                 <option value="">Chọn xe</option>
-                  {listProduct.map((product) => (
-                    <option key={product.slug} value={product.slug}>
-                      {product.name}
-                    </option>
-                  ))}
+                {listProduct.map((product) => (
+                  <option key={product.slug} value={product.slug}>
+                    {product.name}
+                  </option>
+                ))}
               </select>
             </div>
 

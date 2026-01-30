@@ -1,7 +1,7 @@
 "use client";
 import AdminLayout from "./layout";
 import { useEffect, useState } from "react";
-import { Box, TextField, InputAdornment, Button, Stack } from "@mui/material";
+import { Box, TextField, InputAdornment, Button, Stack, CircularProgress } from "@mui/material";
 import { Search, FilterList, Add } from "@mui/icons-material";
 import DynamicTable from "../../components/table/dynamicTable";
 import defaultImage from "../../public/image/default-placeholder.png";
@@ -14,8 +14,6 @@ import { formatNumber } from "../../utils/formartNumber";
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-
-
 
 export default function ProductTable() {
   const [searchText, setSearchText] = useState("");
@@ -30,6 +28,7 @@ export default function ProductTable() {
     open: false,
   });
   const [listData, setListData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const userColumns = [
     {
       key: "avatarImage",
@@ -48,13 +47,27 @@ export default function ProductTable() {
       ),
     },
     { key: "name", label: "Tên" },
-    { key: "price", label: "Giá" , render: (value) => formatNumber(value) != "NaN" ? formatNumber(value) : value},
-    { key: "createdAt", label: "Ngày tạo", render: (value) => value ? new Date(value).toLocaleDateString() : "" },
+    {
+      key: "price",
+      label: "Giá",
+      render: (value) =>
+        formatNumber(value) != "NaN" ? formatNumber(value) : value,
+    },
+    {
+      key: "createdAt",
+      label: "Ngày tạo",
+      render: (value) => (value ? new Date(value).toLocaleDateString() : ""),
+    },
     {
       key: "option",
       label: "",
       render: (_, row) => (
-        <Box display="flex" justifyContent="right" gap={1}>
+        <Box
+          display="flex"
+          justifyContent="right"
+          gap={1}
+          flexDirection={{ xs: "column", md: "row" }}
+        >
           <Button
             onClick={() =>
               setOpenCreate({ open: true, editForm: true, item: row })
@@ -63,9 +76,12 @@ export default function ProductTable() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              bgcolor: "#635BFF",
-              "&:hover": { bgcolor: "#5249f0" },
+              // bgcolor: "#635BFF",
+              // "&:hover": { bgcolor: "#5249f0" },
+              minWidth: { xs: "100%", md: "auto" },
+              
             }}
+            className="btn-primary"
           >
             Sửa
           </Button>
@@ -79,8 +95,9 @@ export default function ProductTable() {
               textTransform: "none",
               bgcolor: "#ff3231",
               "&:hover": { bgcolor: "#d50808" },
+              minWidth: { xs: "100%", md: "auto" },
             }}
-          >
+            className="btn-red"> 
             Xóa
           </Button>
         </Box>
@@ -88,7 +105,8 @@ export default function ProductTable() {
     },
   ];
 
-  const fecthData = () =>
+  const fecthData = () => {
+    setLoading(true);
     fetch(`${BE_URL}/products?limit=1000`, {
       method: "GET",
       headers: {
@@ -100,10 +118,13 @@ export default function ProductTable() {
         if (respone) {
           setListData(respone.products);
         }
-      });
+      })
+      .finally(() => setLoading(false));
+  };
 
   useEffect(() => {
-    fecthData()
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    fecthData();
   }, []);
 
   const handleDelete = (slug) => {
@@ -122,12 +143,38 @@ export default function ProductTable() {
           }
           toast.success("Xóa sản phẩm thành công");
           setOpenDelete({ title: "", id: "", open: false });
-          fecthData()
+          fecthData();
           return res.json();
         })
         .catch((err) => {
           toast.error(err);
         });
+    }
+  };
+
+  const fecthSearchData = () => {
+    try {
+      if (searchText != "") {
+        fetch(`${BE_URL}/search `, {
+          method: "POST",
+          body: JSON.stringify({ search: searchText }),
+          headers: myHeaders,
+        })
+          .then((res) => {
+            if (!res.ok) return;
+            return res.json();
+          })
+          .then((res) => {
+            if (res.products && res.news) {
+              setListData(res.products);
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 
@@ -140,27 +187,32 @@ export default function ProductTable() {
         alignItems={{ xs: "stretch", md: "center" }}
         sx={{ mb: 3 }}
       >
-        <TextField
-          placeholder="Tìm kiếm..."
-          size="small"
-          sx={{
-            bgcolor: "white",
-            borderRadius: 2,
-            width: { md: 300 },
-            "& .MuiOutlinedInput-notchedOutline": { borderColor: "#E0E4EC" },
-          }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Search sx={{ color: "text.secondary" }} />
-              </InputAdornment>
-            ),
-          }}
-
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        />
         <Stack direction="row" spacing={1}>
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            fecthSearchData();
+          }}>
+          <TextField
+            placeholder="Tìm kiếm..."
+            size="small"
+            value={searchText}
+            onChange={(e)=>setSearchText(e.target.value)}
+            sx={{
+              bgcolor: "white",
+              borderRadius: 2,
+              width: { md: 300 },
+              "& .MuiOutlinedInput-notchedOutline": { borderColor: "#E0E4EC" },
+            }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Search sx={{ color: "text.secondary" }} />
+                </InputAdornment>
+              ),
+            }}
+          />
+          <button type="submit" style={{display:"none"}}></button>
+          </form>
           <Button
             variant="outlined"
             startIcon={<FilterList />}
@@ -173,6 +225,8 @@ export default function ProductTable() {
           >
             Lọc
           </Button>
+        </Stack>
+        <Stack direction="row" spacing={1}>
           <Button
             variant="contained"
             startIcon={<Add />}
@@ -180,15 +234,20 @@ export default function ProductTable() {
             sx={{
               borderRadius: 2,
               textTransform: "none",
-              bgcolor: "#635BFF",
-              "&:hover": { bgcolor: "#5249f0" },
             }}
+           className="btn-primary"
           >
             Thêm sản phẩm
           </Button>
         </Stack>
       </Stack>
-      <DynamicTable columns={userColumns} data={listData} />
+      {loading ? (
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
+          <CircularProgress />
+        </Box>
+      ) : (
+        <DynamicTable columns={userColumns} data={listData} />
+      )}
       <CreateProduct_Dialog
         open={openCreate.open}
         handleClose={() =>
@@ -196,7 +255,7 @@ export default function ProductTable() {
         }
         editForm={openCreate.editForm}
         item={openCreate.item}
-        reload={()=>fecthData()}
+        reload={() => fecthData()}
       />
       <Delete_Dialog
         open={openDelete.open}

@@ -15,8 +15,8 @@ export default function FormRegister({ open, handleClose }) {
   const [listProduct, setListProduct] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
-    selected: "",
+    contact: "",
+    message: "",
     installment: false,
   });
 
