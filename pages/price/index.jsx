@@ -86,7 +86,7 @@ export default function Index() {
         ))}
 
         <div className={styles.noteSection}>
-          <i>Lưu ý: Bảng giá có thể thay đổi theo từng thời điểm, Quý khách hàng vui lòng liên hệ Hotline: 0928788889 để nhận thông tin ưu đãi chi tiết và báo giá lăn bánh xe ô tô Omoda & Jaecoo mới nhất!</i>
+          <i>Lưu ý: Bảng giá có thể thay đổi theo từng thời điểm, Quý khách hàng vui lòng liên hệ Hotline: 0908823626 để nhận thông tin ưu đãi chi tiết và báo giá lăn bánh xe ô tô Omoda & Jaecoo mới nhất!</i>
         </div>
          
       </main>

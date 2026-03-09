@@ -8,11 +8,11 @@ export default function Document() {
         <meta charSet="UTF-8" />
         <meta
           name="description"
-          content="Mẫu xe ô tô Amoda  hoàn toàn mới, sự kết hợp tinh hoa giữa công nghệ tối tân và thiết kế sang trọng."
+          content="Mẫu xe ô tô Omoda  hoàn toàn mới, sự kết hợp tinh hoa giữa công nghệ tối tân và thiết kế sang trọng."
         />
         <meta name="keywords" content="omodajaecoo" />
 
-        <meta name="author" content="Htech Software" />
+        <meta name="author" content="omodajaecoo" />
 
         <link
           href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"

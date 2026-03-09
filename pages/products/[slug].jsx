@@ -58,7 +58,7 @@ const productData = {
     "https://omodajaecoohcm.vn/wp-content/uploads/2025/01/j7-phev-trang.png",
     "https://omodajaecoohcm.vn/wp-content/uploads/2025/01/j7-phev-trang.png",
   ],
-  hotline: "0928788889",
+  hotline: "0908823626",
 };
 
 const detailBlock = {
@@ -174,7 +174,7 @@ export default function ProuctDetail() {
           <h1 className={styles.product_name}>{currentProduct.name}</h1>
           <div className={styles.price_section}>
             <span className={styles.old_price}>
-              {formatNumber(currentProduct.price) + " vnđ"}
+              {formatNumber(currentProduct.oldPrice) + " vnđ"}
             </span>
             <span className={styles.current_price}>
               {formatNumber(currentProduct.price) + " vnđ"}
@@ -229,12 +229,12 @@ export default function ProuctDetail() {
 
           <div className={styles.social_icons}>
             <Link
-              href="https://www.facebook.com/share_channel/#"
+              href="https://www.facebook.com/people/%F0%9D%90%8E%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%9D%F0%9D%90%9A-%F0%9D%90%89%F0%9D%90%9A%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A8-%F0%9D%90%81%C3%AC%F0%9D%90%A7%F0%9D%90%A1-%F0%9D%90%83%C6%B0%C6%A1%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%87%C3%A0%F0%9D%90%A8-%F0%9D%9F%8E%F0%9D%9F%97%F0%9D%9F%94%F0%9D%9F%92%F0%9D%9F%8E%F0%9D%9F%94%F0%9D%9F%8E%F0%9D%9F%8F%F0%9D%9F%93%F0%9D%9F%91/61574547544172/"
               className={styles.icon_circle}
             >
               <FaFacebookF />
             </Link>
-            <Link href="mailto:hotro@vidu.com" className={styles.icon_circle}>
+            <Link href="mailto: giahaotran09@gmail.com" className={styles.icon_circle}>
               <CiMail />
             </Link>
           </div>

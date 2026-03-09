@@ -310,4 +310,9 @@
   .action_buttons {
     flex-direction: column;
   }
+
+  /* css bổ sung cập nhật fix lỗi */
+  .description_text p{
+    font-size: 1.3rem;
+  }
 }

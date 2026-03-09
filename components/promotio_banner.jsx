@@ -15,8 +15,8 @@ const PromotionBanner = () => {
         </div> 
         
         <div className={styles.action_section}>
-          <a href="tel:0928788889" className={styles.hotline_button}>
-            HOTLINE: 0928788889
+          <a href="tel:0908823626" className={styles.hotline_button}>
+            HOTLINE: 0908 823 626
           </a>
         </div>
       </div>

@@ -2,12 +2,7 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/admin/banner": "pages/admin/banner.js",
-  "/admin/news": "pages/admin/news.js",
-  "/admin/products": "pages/admin/products.js",
-  "/login": "pages/login.js",
   "/news": "pages/news.js",
-  "/products/[slug]": "pages/products/[slug].js",
-  "/search/[slug]": "pages/search/[slug].js"
+  "/news/[slug]": "pages/news/[slug].js",
+  "/products/[slug]": "pages/products/[slug].js"
 }

@@ -56,7 +56,7 @@ const NewsSection = () => {
             </p>
             <p>
               Cập nhật thông tin ưu đãi và bảng giá sản phẩm mới nhất từ Omoda &
-              Jaecoo Bình Chánh - TP.HCM
+              Jaecoo - TP.HCM
             </p>
           </div>
           <Link href="/news" className={styles.btnMore}>
