@@ -1,0 +1,23 @@
+# https://omodajaecoovietnam.vn/robots.txt
+User-agent: *
+Allow: /
+
+# Chặn khu vực admin - không index
+User-agent: *
+Disallow: /admin/
+
+# Chặn trang đăng nhập / đăng ký (không cần SEO)
+User-agent: *
+Disallow: /login
+Disallow: /register
+
+# Chặn trang tìm kiếm (tránh nội dung trùng lặp)
+User-agent: *
+Disallow: /search/
+
+# Crawl delay hợp lý
+Crawl-delay: 1
+
+# Host & Sitemap
+Host: https://omodajaecoovietnam.vn
+Sitemap: https://omodajaecoovietnam.vn/sitemap.xml

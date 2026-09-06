@@ -6,6 +6,7 @@ import defaultImage from "@/public/image/default-placeholder.png";
 import defaultImgageSection from "@/public/image/img-section-news.jpg";
 import styles_image from "@/styles/ImageNext.module.css";
 import { useRouter } from "next/navigation";
+import { decodeEntities } from "@/utils/decodeHtml";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -95,7 +96,7 @@ const NewsSection = () => {
                     />
                   </div>
                   <div className={styles.info}>
-                    <h3>{item.nameNews}</h3>
+                    <h3>{decodeEntities(item.nameNews)}</h3>
                     <div className={styles.viewMoreLink}>Xem thêm</div>
                   </div>
                 </div>

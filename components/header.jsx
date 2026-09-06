@@ -20,7 +20,8 @@ const STATIC_MENU = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [menuItems, setMenuItems] = useState(STATIC_MENU);
+  const [brandGroups, setBrandGroups] = useState({ jaecoo: [], omoda: [] });
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [search_text, setSearch_text] = useState("");
   const pathname = usePathname();
   const router = useRouter();
@@ -33,16 +34,16 @@ const Header = () => {
       });
       const res = await response.json();
       if (res.products && res.products.length > 0) {
-        const productLinks = res.products.map((item, index) => {
-          if (index < 3) {
-            return {
-              title: item.name,
-              path: `/products/${item.slug}`,
-            };
-          }
+        const jaecoo = [];
+        const omoda = [];
+        res.products.forEach((item) => {
+          if (!item.name || !item.slug) return;
+          const name = String(item.name).toLowerCase();
+          const link = { title: item.name, path: `/products/${item.slug}` };
+          if (name.includes("jaecoo")) jaecoo.push(link);
+          else if (name.includes("omoda")) omoda.push(link);
         });
-
-        setMenuItems([...productLinks, ...STATIC_MENU]);
+        setBrandGroups({ jaecoo, omoda });
       }
     } catch (error) {
       console.error("Lỗi khi fetch sản phẩm:", error);
@@ -53,6 +54,54 @@ const Header = () => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchProducts();
   }, []);
+
+  const renderDropdown = (brandKey, label) => {
+    const items = brandGroups[brandKey];
+    if (!items || items.length === 0) return null;
+    const isOpen = openDropdown === brandKey;
+    const hasActiveChild = items.some(
+      (item) => pathname && item.path && pathname.includes(item.path),
+    );
+
+    return (
+      <div
+        key={brandKey}
+        className={`${styles.dropdown} ${isOpen ? styles.dropdown_open : ""}`}
+        onMouseEnter={() => setOpenDropdown(brandKey)}
+        onMouseLeave={() => setOpenDropdown(null)}
+      >
+        <button
+          type="button"
+          className={`${styles.nav_item} ${styles.dropdown_trigger} ${
+            hasActiveChild ? styles.active : ""
+          }`}
+          onClick={() => setOpenDropdown(isOpen ? null : brandKey)}
+        >
+          {label}
+          <span className={styles.caret}>▾</span>
+        </button>
+        <div className={styles.dropdown_menu}>
+          {items.map((item, index) => (
+            <Link
+              key={index}
+              href={item.path}
+              onClick={() => {
+                setIsMenuOpen(false);
+                setOpenDropdown(null);
+              }}
+              className={`${styles.dropdown_item} ${
+                pathname && item.path && pathname.includes(item.path)
+                  ? styles.active
+                  : ""
+              }`}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <header className={styles.custom_header}>
@@ -73,14 +122,16 @@ const Header = () => {
         <nav
           className={`${styles.nav_menu} ${isMenuOpen ? styles.nav_active : ""}`}
         >
-          {menuItems.map((value, index) => (
+          {renderDropdown("jaecoo", "JAECOO")}
+          {renderDropdown("omoda", "OMODA")}
+          {STATIC_MENU.map((value, index) => (
             <Link
-              key={index}
-              href={value.path ? value.path : "#"}
+              key={`static-${index}`}
+              href={value.path}
               onClick={() => setIsMenuOpen(false)}
-              className={`${styles.nav_item} ${pathname != null && pathname.includes(value.path) ? styles.active : ""}`}
+              className={`${styles.nav_item} ${pathname && value.path && pathname.includes(value.path) ? styles.active : ""}`}
             >
-              {String(value.title).toLocaleUpperCase()}
+              {value.title.toUpperCase()}
             </Link>
           ))}
 

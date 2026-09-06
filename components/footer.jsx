@@ -26,13 +26,13 @@ const Footer = () => {
         <div className={`${styles.footer_column}  ${styles.info_section}`}>
           <h3 className={styles.column_title}>HỖ TRỢ KHÁCH HÀNG</h3>
           <p>
-            <strong>Hotline:</strong> <a href="tel:+84908823626">+84908823626</a>
+            <strong>Hotline:</strong> <a href="tel:+84389122626">+84389122626</a>
           </p>
           <p>35/4B Đại lộ Bình Dương, Thuận Giao, Thuận An, Bình Dương</p>
           <p>
             <strong>Email:</strong>{" "}
-            <a href="mailto:giahaotran09@gmail.com">
-              giahaotran09@gmail.com 
+            <a href="mailto:hoangsang24998@gmail.com">
+              hoangsang24998@gmail.com 
             </a>
           </p>
         </div>
@@ -43,10 +43,10 @@ const Footer = () => {
             <a href="https://www.facebook.com/people/%F0%9D%90%8E%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%9D%F0%9D%90%9A-%F0%9D%90%89%F0%9D%90%9A%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%A8%F0%9D%90%A8-%F0%9D%90%81%C3%AC%F0%9D%90%A7%F0%9D%90%A1-%F0%9D%90%83%C6%B0%C6%A1%F0%9D%90%A7%F0%9D%90%A0-%F0%9D%90%87%C3%A0%F0%9D%90%A8-%F0%9D%9F%8E%F0%9D%9F%97%F0%9D%9F%94%F0%9D%9F%92%F0%9D%9F%8E%F0%9D%9F%94%F0%9D%9F%8E%F0%9D%9F%8F%F0%9D%9F%93%F0%9D%9F%91/61574547544172/" className={styles.icon_circle}>
               <FaFacebookF/>
             </a>
-            <a href="mailto:giahaotran09@gmail.com" className={styles.icon_circle}>
+            <a href="mailto:hoangsang24998@gmail.com" className={styles.icon_circle}>
               <CiMail/>
             </a>
-            <a href="tel:+84908823626" className={styles.icon_circle}>
+            <a href="tel:+0389122626" className={styles.icon_circle}>
               <FaPhone/>
             </a>
           </div>

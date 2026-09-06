@@ -4,6 +4,7 @@ import ProductCard from "../../components/search/product_card";
 import NewsCard from "../../components/search/new_card";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -41,6 +42,18 @@ export default function SearchPage() {
   }, [slug]);
 
   return (
+    <>
+      <Head>
+        <title>Tìm kiếm "{slug}" | Omodajacoovietnam</title>
+        <meta name="description" content={`Kết quả tìm kiếm cho "${slug}" - Tìm sản phẩm xe Omoda, Jaecoo và tin tức liên quan tại Omodajacoovietnam.`} />
+        <meta property="og:title" content={`Tìm kiếm "${slug}" | Omodajacoovietnam`} />
+        <meta property="og:description" content={`Kết quả tìm kiếm cho "${slug}" tại Omodajacoovietnam.`} />
+        <meta property="og:url" content={`https://omodajaecoovietnam.vn/search/${slug}`} />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="canonical" href={`https://omodajaecoovietnam.vn/search/${slug}`} />
+      </Head>
+
     <div className={styles.search_container}>
       <nav className={styles.breadcrumb}>
         SẢN PHẨM / <strong>KẾT QUẢ TÌM KIẾM</strong>
@@ -63,5 +76,6 @@ export default function SearchPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

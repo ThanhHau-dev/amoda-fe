@@ -1,12 +1,10 @@
 import Image from "next/image";
-import Head from "next/head";
 import styles from "../../styles/news.module.css";
 import { useRouter } from "next/navigation";
 import AsideNews from "@/components/aside_news";
 import Pagination from "@/components/pagination";
 import PromotionBanner from "@/components/promotio_banner";
 import { useEffect, useState } from "react";
-import { decodeEntities } from "@/utils/decodeHtml";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -19,8 +17,8 @@ export default function ListNews() {
   const [totalPages, setTotalPages] = useState(1);
   const limit = 10; 
 
-  const fetchNews = (page) => {
-    fetch(`${BE_URL}/news?page=${page}&limit=${limit}`, {
+  const fetchNews = () => {
+    fetch(`${BE_URL}/news?limit=${limit}`, {
       method: "GET",
       headers: myHeaders,
     })
@@ -37,36 +35,6 @@ export default function ListNews() {
 
   return (
     <>
-      <Head>
-        <title>Tin Tức | Omodajacoovietnam</title>
-        <meta name="description" content="Cập nhật tin tức mới nhất từ Omodajacoovietnam - Tin tức, sự kiện và bài viết hữu ích." />
-        <meta property="og:title" content="Tin Tức | Omodajacoovietnam" />
-        <meta
-          property="og:description"
-          content="Cập nhật tin tức mới nhất từ Omodajacoovietnam - Tin tức, sự kiện và bài viết hữu ích."
-        />
-        <meta property="og:url" content="https://omodajaecoovietnam.vn/news" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <link rel="canonical" href="https://omodajaecoovietnam.vn/news" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              name: "Tin Tức | Omodajacoovietnam",
-              description: "Cập nhật tin tức mới nhất từ Omodajacoovietnam",
-              url: "https://omodajaecoovietnam.vn/news",
-              publisher: {
-                "@type": "Organization",
-                name: "Omodajacoovietnam",
-              },
-            }),
-          }}
-        />
-      </Head>
-
       <div className={styles.news_container}>
         <div className={styles.news_layout_grid}>
           <main className={styles.main_content_area}>
@@ -86,9 +54,9 @@ export default function ListNews() {
                   />
                 </div>
                 <div className={styles.news_info_wrapper}>
-                  <h2 className={styles.news_item_title}>{decodeEntities(item.nameNews)}</h2>
+                  <h2 className={styles.news_item_title}>{item.nameNews}</h2>
                   <div className={styles.news_divider}></div>
-                  <p className={styles.news_item_excerpt}>{decodeEntities(item.description)}</p>
+                  <p className={styles.news_item_excerpt}>{item.description}</p>
                 </div>
               </article>
             ))}

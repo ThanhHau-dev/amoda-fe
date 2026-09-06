@@ -65,8 +65,8 @@ export default function RegisterForm() {
           </div>
           <div className={styles.hotline_info}>
             <span className={styles.hotline_label}>Hotline</span>
-            <a href="tel:0908823626" className={styles.otline_number}>
-              0908 823 626
+            <a href="tel:0389122626" className={styles.otline_number}>
+              0389 122 626
             </a>
           </div>
         </div>

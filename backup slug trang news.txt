@@ -7,7 +7,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import imageDefault from "../../public/image/default-placeholder.png";
-import { decodeEntities } from "../../utils/decodeHtml";
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
@@ -49,7 +48,7 @@ export default function NewsDetail() {
   }, [slug]);
 
   return (
-    <>
+          {/* SEO meta tags */}
       <Head>
         <title>{currentNews.nameNews} | Omodajacoovietnam</title>
         <meta name="description" content={currentNews.description || currentNews.nameNews} />
@@ -63,11 +62,11 @@ export default function NewsDetail() {
         )}
         <meta
           property="og:url"
-          content={`https://omodajaecoovietnam.vn/news/${currentNews.slug}`}
+          content={`https://htechsoft.vn/news/${currentNews.slug}`}
         />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://omodajaecoovietnam.vn/news/${currentNews.slug}`} />
+        <link rel="canonical" href={`https://htechsoft.vn/news/${currentNews.slug}`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -83,19 +82,19 @@ export default function NewsDetail() {
               },
               publisher: {
                 "@type": "Organization",
-                name: "Omodajacoovietnam",
+                name: "Htech Software",
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://omodajaecoovietnam.vn/logo.png",
+                  url: "https://htechsoft.vn/logo.png",
                 },
-                sameAs: ["https://omodajaecoovietnam.vn/about"],
+                sameAs: ["https://htechsoft.vn/about"],
               },
               description: currentNews.description || currentNews.nameNews,
             }),
           }}
         />
       </Head>
-
+    <main>
     <div className={styles.news_container}>
       <div className={styles.news_layout_grid}>
         <div className={styles_detail.container}>
@@ -103,13 +102,13 @@ export default function NewsDetail() {
             <header className={styles_detail.article_header}>
               <span className={styles_detail.category_tag}>TIN TỨC</span>
               <h1 className={styles_detail.article_title}>
-                {decodeEntities(currentNews.nameNews)}
+                {currentNews.nameNews}
               </h1>
               <div className={styles_detail.divider}></div>
             </header>
 
             <section className={styles_detail.article_content}>
-              <p>{decodeEntities(currentNews.description)}</p>
+              <p>{currentNews.description}</p>
             </section>
 
             <div className={styles_image.image_container}>
@@ -131,6 +130,6 @@ export default function NewsDetail() {
         <AsideNews />
       </div>
     </div>
-    </>
+  </main>
   );
 }

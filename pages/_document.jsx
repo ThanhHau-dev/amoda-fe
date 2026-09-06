@@ -19,6 +19,19 @@ export default function Document() {
           rel="stylesheet"
         />
 
+        {/* Open Graph toàn cục - fallback cho các trang */}
+        <meta property="og:site_name" content="Omodajacoovietnam" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="vi_VN" />
+
+        {/* Twitter Card toàn cục */}
+        <meta name="twitter:site" content="@omodajaecoo" />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"

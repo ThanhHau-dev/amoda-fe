@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/components/aside_news.module.css";
 import { useEffect, useState } from "react";
+import { decodeEntities } from "../utils/decodeHtml";
 
 const BE_URL = process.env.NEXT_PUBLIC_BE_URL;
 const myHeaders = new Headers();
@@ -40,7 +41,7 @@ export default function AsideNews() {
         {listNews.map((item, index) => (
           <li key={item._id} className={styles.sidebar_item}>
             <Link href={`/news/${item.slug}`} className={styles.sidebar_link}>
-              {item.nameNews}
+              {decodeEntities(item.nameNews)}
             </Link>
           </li>
         ))}

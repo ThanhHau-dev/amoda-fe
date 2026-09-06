@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import styles_image from "../../styles/ImageNext.module.css";
 import Image from "next/image";
 import styles from "../../styles/product_detail.module.css";
@@ -128,56 +127,6 @@ export default function ProuctDetail() {
   }, [slug]);
 
   return (
-    <>
-      <Head>
-        <title>{currentProduct.name} | Omodajacoovietnam</title>
-        <meta name="description" content={`Giá xe ${currentProduct.name} - Hãy liên hệ ngay để nhận báo giá lăn bánh và ưu đãi mới nhất.`} />
-        <meta property="og:title" content={currentProduct.name} />
-        <meta
-          property="og:description"
-          content={`Giá xe ${currentProduct.name} - Hãy liên hệ ngay để nhận báo giá lăn bánh và ưu đãi mới nhất.`}
-        />
-        {currentProduct.avatarImage && (
-          <meta property="og:image" content={currentProduct.avatarImage} />
-        )}
-        {currentProduct.galleryImages && currentProduct.galleryImages.length > 0 && (
-          <meta property="og:image" content={currentProduct.galleryImages[0]} />
-        )}
-        <meta
-          property="og:url"
-          content={`https://omodajaecoovietnam.vn/products/${currentProduct.slug}`}
-        />
-        <meta property="og:type" content="product" />
-        {currentProduct.price && (
-          <meta property="product:price:amount" content={currentProduct.price.toString()} />
-        )}
-        <meta property="product:price:currency" content="VND" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href={`https://omodajaecoovietnam.vn/products/${currentProduct.slug}`} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Product",
-              name: currentProduct.name,
-              image: currentProduct.galleryImages || [currentProduct.avatarImage],
-              description: `Giá xe ${currentProduct.name} - Hãy liên hệ ngay để nhận báo giá lăn bánh và ưu đãi mới nhất.`,
-              offers: {
-                "@type": "Offer",
-                priceCurrency: "VND",
-                price: currentProduct.price || "0",
-                availability: "https://schema.org/InStock",
-              },
-              brand: {
-                "@type": "Brand",
-                name: "Omodajacoovietnam",
-              },
-            }),
-          }}
-        />
-      </Head>
-
     <div className={styles.product_detail_container}>
       <div className={styles.product_grid}>
         <div className={styles.image_gallery_column}>
@@ -313,6 +262,5 @@ export default function ProuctDetail() {
 
       <RegisterForm />
     </div>
-    </>
   );
 }

@@ -2,6 +2,7 @@ import { useRouter } from 'next/navigation';
 import styles from '../../styles/components/news_card.module.css';
 import styles_image from "../../styles/ImageNext.module.css"
 import Image from 'next/image';
+import { decodeEntities } from "../../utils/decodeHtml";
 
 const mockdata = {
   dateTime: "",
@@ -32,7 +33,7 @@ export default function NewsCard({ news = mockdata }) {
       
       <div className={styles.news_info}>
         <p className={styles.news_category}>{news.category || 'TIN TỨC'}</p>
-        <h3 className={styles.news_title}>{news.nameNews}</h3>
+        <h3 className={styles.news_title}>{decodeEntities(news.nameNews)}</h3>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/components/price_table.module.css";
 import Image from "next/image";
+import bannerImgJ7 from "@/public/image/price-j7.jpg";
 
 const pricingData = {
   data: [
@@ -27,7 +28,7 @@ const pricingData = {
     },
   ],
   title: "Chương trình ưu đãi Omoda C5",
-  image: "https://omodajaecoohcm.vn/wp-content/uploads/2026/01/3.jpg",
+  image: bannerImgJ7,
 };
 export default function PriceTable({ item = pricingData }) {
   return (

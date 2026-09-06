@@ -14,7 +14,7 @@ export default function ContactFloats() {
       </a>
 
       <a
-        href="https://zalo.me/+84908823626"
+        href="https://zalo.me/+84389122626"
         target="_blank"
         className={`${styles.btn} ${styles.zalo}`}
       >
@@ -22,7 +22,7 @@ export default function ContactFloats() {
         <SiZalo />
       </a>
 
-      <a href="tel:+84908823626" className={`${styles.btn} ${styles.phone}`}>
+      <a href="tel:+84389122626" className={`${styles.btn} ${styles.phone}`}>
         <div className={styles.phoneRipple}></div>
         <FaPhone />
       </a>

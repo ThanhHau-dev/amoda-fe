@@ -2,7 +2,11 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/news": "pages/news.js",
+  "/admin/dashboard": "pages/admin/dashboard.js",
+  "/admin/products": "pages/admin/products.js",
+  "/login": "pages/login.js",
   "/news/[slug]": "pages/news/[slug].js",
-  "/products/[slug]": "pages/products/[slug].js"
+  "/price": "pages/price.js",
+  "/products/[slug]": "pages/products/[slug].js",
+  "/search/[slug]": "pages/search/[slug].js"
 }
