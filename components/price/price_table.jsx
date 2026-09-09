@@ -33,7 +33,7 @@ const pricingData = {
 export default function PriceTable({ item = pricingData }) {
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.tableHeading}>Chương trình ưu đãi xe Omoda C5</h3>
+      <h3 className={styles.tableHeading}>{item.title}</h3>
       <div className={styles.tableResponsive}>
         <table className={styles.table}>
           <thead>
