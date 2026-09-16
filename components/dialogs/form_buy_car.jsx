@@ -204,7 +204,7 @@ export default function FormBuyCar({ open, handleClose }) {
               <Image
                 width={1000}
                 height={1000}
-                src="https://omodajaecoohcm.vn/wp-content/uploads/2025/01/2026.jpg"
+                src="/image/price-c5.jpg"
                 alt="Omoda C5"
                 className={styles.main_img}
               />

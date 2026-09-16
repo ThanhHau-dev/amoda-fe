@@ -86,7 +86,7 @@ export default function RegisterForm() {
             <Image
               width={1000}
               height={1000}
-              src="https://omodajaecoohcm.vn/wp-content/uploads/2026/01/3.jpg"
+              src="/image/price-c5.jpg"
               alt="Omoda C5"
               className={styles.main_img}
             />

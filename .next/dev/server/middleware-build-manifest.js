@@ -42,31 +42,22 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/pages__app_2da965e7._.js",
       "static/chunks/turbopack-pages__app_30ef628c._.js"
     ],
-    "/_error": [
-      "static/chunks/node_modules_next_dist_compiled_8ca6b690._.js",
-      "static/chunks/node_modules_next_dist_shared_lib_9a2a7093._.js",
-      "static/chunks/node_modules_next_dist_client_5a8a528e._.js",
-      "static/chunks/node_modules_next_dist_a183fb77._.js",
-      "static/chunks/node_modules_next_error_1cfbb379.js",
-      "static/chunks/[next]_entry_page-loader_ts_43b523b5._.js",
-      "static/chunks/node_modules_react-dom_4411d9bd._.js",
-      "static/chunks/node_modules_7f09fef0._.js",
-      "static/chunks/[root-of-the-server]__092393de._.js",
-      "static/chunks/pages__error_2da965e7._.js",
-      "static/chunks/turbopack-pages__error_af01c4e3._.js"
-    ],
-    "/price": [
+    "/register": [
       "static/chunks/node_modules_next_dist_compiled_4501ac73._.js",
       "static/chunks/node_modules_next_dist_shared_lib_0189c774._.js",
       "static/chunks/node_modules_next_dist_client_9331d388._.js",
       "static/chunks/node_modules_next_dist_75b597d7._.js",
-      "static/chunks/node_modules_next_cad67f06._.js",
+      "static/chunks/node_modules_next_image_e7eb52cb.js",
       "static/chunks/node_modules_react-dom_4411d9bd._.js",
-      "static/chunks/node_modules_f1be3ba2._.js",
-      "static/chunks/[root-of-the-server]__df809de3._.js",
-      "static/chunks/styles_9d34e684._.css",
-      "static/chunks/pages_price_index_jsx_2da965e7._.js",
-      "static/chunks/turbopack-pages_price_index_jsx_d2c95203._.js"
+      "static/chunks/node_modules_react-icons_fa6_index_mjs_d7eacb2c._.js",
+      "static/chunks/node_modules_react-icons_io5_index_mjs_92991f0a._.js",
+      "static/chunks/node_modules_react-icons_fa_index_mjs_c19690bf._.js",
+      "static/chunks/node_modules_react-icons_lib_7cd2a28b._.js",
+      "static/chunks/node_modules_3cba6ff9._.js",
+      "static/chunks/[root-of-the-server]__bc1f87a2._.js",
+      "static/chunks/styles_105d233e._.css",
+      "static/chunks/pages_register_index_jsx_2da965e7._.js",
+      "static/chunks/turbopack-pages_register_index_jsx_00ba6188._.js"
     ]
   },
   "devFiles": [],
