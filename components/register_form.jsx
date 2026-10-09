@@ -86,12 +86,12 @@ export default function RegisterForm() {
             <Image
               width={1000}
               height={1000}
-              src="/image/price-c5.jpg"
+              src="/image/jacoe5-update.jpeg"
               alt="Omoda C5"
               className={styles.main_img}
             />
             <div className={styles.promo_badge_overlay}>
-              <div className={styles.badge_content}>
+              {/* <div className={styles.badge_content}>
                 <p className={styles.badge_title}>OMODA C5</p>
                 <div className={styles.badge_details}>
                   <span>
@@ -101,7 +101,7 @@ export default function RegisterForm() {
                     Lãi suất <strong>0 ĐỒNG</strong> trong 12 tháng
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

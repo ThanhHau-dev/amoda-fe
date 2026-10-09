@@ -204,7 +204,7 @@ export default function FormBuyCar({ open, handleClose }) {
               <Image
                 width={1000}
                 height={1000}
-                src="/image/price-c5.jpg"
+                src="/image/jacoe5-update.jpeg"
                 alt="Omoda C5"
                 className={styles.main_img}
               />

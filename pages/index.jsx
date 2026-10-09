@@ -86,7 +86,7 @@ export default function Index() {
               description: "Phân phối xe ô tô Omoda, Jaecoo chính hãng",
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+84-908-823-626",
+                telephone: "0389 122626",
                 contactType: "sales",
               },
               sameAs: [

@@ -1,6 +1,17 @@
-[00:00:01.016] Server  LOG     ✓ Ready in 807ms
-[00:00:14.738] Browser WARN    Image with src "/_next/static/media/img-section-news.e081d9ee.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:36.357] Server  LOG     ✓ Compiled in 10ms
-[00:06:18.149] Server  LOG     ✓ Compiled in 9ms
-[00:15:54.776] Server  LOG     ✓ Compiled in 21ms
-[00:16:21.852] Browser WARN    Image with src "/_next/static/media/img-section-news.e081d9ee.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:01.005] Server  LOG     ✓ Ready in 810ms
+[00:09:00.094] Server  ERROR   An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+[00:09:03.207] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:09:03.207] Browser ERROR   Image is missing required "src" property: <img>
+[00:09:03.312] Browser WARN    Image with src "/_next/static/media/img-section-news.e081d9ee.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:10:20.420] Server  LOG     ✓ Compiled in 13ms
+[00:10:59.847] Server  LOG     ✓ Compiled in 7ms
+[00:11:19.646] Server  LOG     ✓ Compiled in 8ms
+[00:13:09.025] Server  LOG     ✓ Compiled in 53ms
+[00:13:12.825] Browser WARN    Image with src "/_next/static/media/img-section-news.e081d9ee.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:13:22.867] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:13:22.867] Browser ERROR   Image is missing required "src" property: <img>
+[00:13:31.645] Server  LOG     ✓ Compiled in 11ms
+[00:13:38.552] Server  LOG     ✓ Compiled in 26ms
+[00:13:38.638] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
+[00:13:38.638] Browser ERROR   Image is missing required "src" property: <img>
+[00:13:41.722] Server  LOG     ✓ Compiled in 13ms
